@@ -79,7 +79,9 @@ describe('Geo', () => {
 			geo.addPluggable(provider);
 			geo.removePluggable(provider.getProviderName());
 
-			expect(geo.getPluggable(provider.getProviderName())).toBeNull;
+			expect(() => geo.getPluggable(provider.getProviderName())).toThrow(
+				'No plugin found in Geo for the provider'
+			);
 		});
 
 		test('removePluggable', () => {
@@ -88,7 +90,9 @@ describe('Geo', () => {
 			geo.addPluggable(provider);
 			geo.removePluggable(provider.getProviderName());
 
-			expect(geo.getPluggable(provider.getProviderName())).toBeNull();
+			expect(() => geo.getPluggable(provider.getProviderName())).toThrow(
+				'No plugin found in Geo for the provider'
+			);
 		});
 	});
 

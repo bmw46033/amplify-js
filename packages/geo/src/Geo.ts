@@ -76,7 +76,7 @@ export class GeoClass {
 		);
 		if (pluggable === undefined) {
 			logger.debug('No plugin found with providerName', providerName);
-			return null;
+			throw 'No plugin found in Geo for the provider';
 		} else return pluggable;
 	}
 
@@ -120,14 +120,7 @@ export class GeoClass {
 	 * @returns - Array of available map resources
 	 */
 	public getAvailableMaps(provider = DEFAULT_PROVIDER): MapStyle[] | string {
-		const prov = this._pluggables.find(
-			pluggable => pluggable.getProviderName() === provider
-		);
-
-		if (prov === undefined) {
-			logger.debug('No plugin found with providerName', provider);
-			throw 'No plugin found in Geo for the provider';
-		}
+		const prov = this.getPluggable(provider);
 
 		return prov.getAvailableMaps();
 	}
@@ -138,27 +131,14 @@ export class GeoClass {
 	 * @returns - Map resource set as the default in amplify config
 	 */
 	public getDefaultMap(provider = DEFAULT_PROVIDER): MapStyle | string {
-		const prov = this._pluggables.find(
-			pluggable => pluggable.getProviderName() === provider
-		);
-
-		if (prov === undefined) {
-			logger.debug('No plugin found with providerName', provider);
-			throw 'No plugin found in Geo for the provider';
-		}
+		const prov = this.getPluggable(provider);
 
 		return prov.getDefaultMap();
 	}
 
 	public async searchByText(text: string, options?: SearchByTextOptions) {
 		const { providerName = DEFAULT_PROVIDER } = options || {};
-		const prov = this._pluggables.find(
-			pluggable => pluggable.getProviderName() === providerName
-		);
-		if (prov === undefined) {
-			logger.debug('No plugin found with providerName', providerName);
-			return Promise.reject('No plugin found in Geo for the provider');
-		}
+		const prov = this.getPluggable(providerName);
 
 		try {
 			return await prov.searchByText(text, options);
@@ -172,13 +152,8 @@ export class GeoClass {
 		options?: SearchByCoordinatesOptions
 	) {
 		const { providerName = DEFAULT_PROVIDER } = options || {};
-		const prov = this._pluggables.find(
-			pluggable => pluggable.getProviderName() === providerName
-		);
-		if (prov === undefined) {
-			logger.debug('No plugin found with providerName', providerName);
-			return Promise.reject('No plugin found in Geo for the provider');
-		}
+		const prov = this.getPluggable(providerName);
+
 		try {
 			return await prov.searchByCoordinates(coordinates, options);
 		} catch (error) {
