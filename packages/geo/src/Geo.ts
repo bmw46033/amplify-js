@@ -58,7 +58,9 @@ export class GeoClass {
 	public addPluggable(pluggable: GeoProvider) {
 		if (pluggable && pluggable.getCategory() === 'Geo') {
 			this._pluggables.push(pluggable);
-			const config = pluggable.configure(this._config);
+			const config = pluggable.configure(
+				this._config[pluggable.getProviderName()]
+			);
 
 			return config;
 		}
@@ -100,10 +102,10 @@ export class GeoClass {
 		if (!config) return this._config;
 
 		const amplifyConfig = parseMobileHubConfig(config);
-		this._config = Object.assign({}, this._config, amplifyConfig.Geo);
+		this._config = Object.assign({}, this._config, amplifyConfig.Geo, config);
 
 		this._pluggables.forEach(pluggable => {
-			pluggable.configure(this._config);
+			pluggable.configure(this._config[pluggable.getProviderName()]);
 		});
 
 		if (this._pluggables.length === 0) {

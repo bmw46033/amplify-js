@@ -55,12 +55,9 @@ export const parseMobileHubConfig = (config): AmplifyConfig => {
 
 	// Geo
 	if (config['geo']) {
-		amplifyConfig.Geo = Object.assign({}, config.geo);
-	}
-
-	// Geo
-	if (config['geo']) {
-		amplifyConfig.Geo = Object.assign({}, config.geo);
+		amplifyConfig.Geo = {
+			AmazonLocationServices: config.geo['amazon_location_services'],
+		};
 	}
 
 	amplifyConfig.Analytics = Object.assign(
