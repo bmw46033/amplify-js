@@ -160,8 +160,11 @@ export class GeoClass {
 			return Promise.reject('No plugin found in Geo for the provider');
 		}
 
-		const responsePromise = await prov.searchByText(text, options);
-		return responsePromise;
+		try {
+			return await prov.searchByText(text, options);
+		} catch (error) {
+			throw new Error(error);
+		}
 	}
 
 	public async searchByCoordinates(
@@ -176,9 +179,11 @@ export class GeoClass {
 			logger.debug('No plugin found with providerName', providerName);
 			return Promise.reject('No plugin found in Geo for the provider');
 		}
-
-		const responsePromise = prov.searchByCoordinates(coordinates, options);
-		return responsePromise;
+		try {
+			return await prov.searchByCoordinates(coordinates, options);
+		} catch (error) {
+			throw new Error(error);
+		}
 	}
 }
 
