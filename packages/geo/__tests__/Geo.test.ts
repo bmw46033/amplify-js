@@ -73,6 +73,15 @@ describe('Geo', () => {
 			);
 		});
 
+		test('getPluggable returns null if provider is not found', () => {
+			const geo = new GeoClass();
+			const provider = new AmazonLocationServicesProvider();
+			geo.addPluggable(provider);
+			geo.removePluggable(provider.getProviderName());
+
+			expect(geo.getPluggable(provider.getProviderName())).toBeNull;
+		});
+
 		test('removePluggable', () => {
 			const geo = new GeoClass();
 			const provider = new AmazonLocationServicesProvider();
