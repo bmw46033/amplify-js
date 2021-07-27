@@ -9,7 +9,7 @@ export declare class GreetingComponentCore implements OnInit {
     protected logger: any;
     constructor(amplifyService: AmplifyService);
     authState: AuthState;
-    usernameAttributes: string;
+    set usernameAttributes(usernameAttributes: string);
     ngOnInit(): void;
     subscribe(): void;
     setAuthState(authState: AuthState): void;

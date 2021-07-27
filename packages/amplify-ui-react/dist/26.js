@@ -18,8 +18,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -172,9 +172,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 var amplifyNavCss = ".nav{display:-ms-flexbox;display:flex;-ms-flex:1 1 0%;flex:1 1 0%;-ms-flex-pack:end;justify-content:flex-end;-ms-flex-align:center;align-items:center}.nav>*{margin:0 0.5em}";
 
-var AmplifyNav =
-/** @class */
-function () {
+var AmplifyNav = function () {
   function AmplifyNav(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
@@ -190,14 +188,12 @@ function () {
 
 AmplifyNav.style = amplifyNavCss;
 
-var AmplifySignOut =
-/** @class */
-function () {
+var AmplifySignOut = function () {
   function class_1(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Auth state change handler for this component */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Text inside of the Sign Out button */
 
     this.buttonText = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].SIGN_OUT;
@@ -212,7 +208,7 @@ function () {
             if (event) event.preventDefault(); // TODO: Federated Sign Out
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].signOut !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             _a.label = 1;
@@ -234,7 +230,7 @@ function () {
 
           case 3:
             error_1 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
             return [3
             /*break*/
             , 4];

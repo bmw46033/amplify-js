@@ -8,9 +8,9 @@ export declare class S3ImageComponentCore implements OnInit {
     protected logger: any;
     selected: EventEmitter<string>;
     constructor(amplifyService: AmplifyService);
-    data: any;
-    path: string;
-    options: any;
+    set data(data: any);
+    set path(path: string);
+    set options(options: any);
     ngOnInit(): void;
     onImageClicked(): void;
     getImage(path: any, options: any): void;

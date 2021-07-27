@@ -1182,7 +1182,7 @@ var AmplifyTotpSetup = /** @class */ (function () {
         this.el = r.nativeElement;
     }
     AmplifyTotpSetup.decorators = [
-        { type: Component, args: [{ selector: 'amplify-totp-setup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['handleAuthStateChange', 'headerText', 'issuer', 'user'] },] },
+        { type: Component, args: [{ selector: 'amplify-totp-setup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['handleAuthStateChange', 'handleComplete', 'headerText', 'issuer', 'standalone', 'user'] },] },
     ];
     /** @nocollapse */
     AmplifyTotpSetup.ctorParameters = function () { return [
@@ -1191,7 +1191,7 @@ var AmplifyTotpSetup = /** @class */ (function () {
         { type: NgZone }
     ]; };
     AmplifyTotpSetup = __decorate([
-        ProxyCmp({ inputs: ['handleAuthStateChange', 'headerText', 'issuer', 'user'] }),
+        ProxyCmp({ inputs: ['handleAuthStateChange', 'handleComplete', 'headerText', 'issuer', 'standalone', 'user'] }),
         __metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])
     ], AmplifyTotpSetup);
     return AmplifyTotpSetup;

@@ -9,9 +9,9 @@ export declare class RequireNewPasswordComponentCore implements OnInit {
     errorMessage: string;
     protected logger: any;
     constructor(amplifyService: AmplifyService);
-    authState: AuthState;
+    set authState(authState: AuthState);
     hide: string[];
-    data: any;
+    set data(data: any);
     ngOnInit(): void;
     shouldHide(comp: any): boolean;
     setPassword(password: string): void;

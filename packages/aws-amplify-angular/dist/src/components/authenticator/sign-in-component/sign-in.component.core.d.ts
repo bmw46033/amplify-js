@@ -16,10 +16,10 @@ export declare class SignInComponentCore implements OnInit {
     signInUsername: string;
     protected logger: any;
     constructor(amplifyService: AmplifyService);
-    data: any;
+    set data(data: any);
     hide: string[];
-    authState: AuthState;
-    usernameAttributes: string;
+    set authState(authState: AuthState);
+    set usernameAttributes(usernameAttributes: string);
     ngOnInit(): void;
     shouldHide(comp: any): boolean;
     setUsername(username: string): void;

@@ -24,7 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 
 
 
@@ -111,9 +111,7 @@ var componentFieldMapping = {
 };
 var amplifyAuthFieldsCss = ".auth-fields{margin-bottom:2rem}";
 
-var AmplifyAuthFields =
-/** @class */
-function () {
+var AmplifyAuthFields = function () {
   function AmplifyAuthFields(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
   }
@@ -144,14 +142,12 @@ function () {
 
 AmplifyAuthFields.style = amplifyAuthFieldsCss;
 
-var AmplifyCodeField =
-/** @class */
-function () {
+var AmplifyCodeField = function () {
   function AmplifyCodeField(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Based on the type of field e.g. sign in, sign up, forgot password, etc. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["k"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["j"];
     /** Used for the code label */
 
     this.label = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__["T"].CODE_LABEL;
@@ -801,14 +797,12 @@ var countryDialCodes = [{
   value: '+998'
 }];
 
-var AmplifyCountryDialCode =
-/** @class */
-function () {
+var AmplifyCountryDialCode = function () {
   function AmplifyCountryDialCode(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** The ID of the field.  Should match with its corresponding input's ID. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["C"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["C"];
     /** The options of the country dial code select input. */
 
     this.options = countryDialCodes;
@@ -854,14 +848,12 @@ function () {
   return AmplifyCountryDialCode;
 }();
 
-var AmplifyEmailField =
-/** @class */
-function () {
+var AmplifyEmailField = function () {
   function AmplifyEmailField(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Based on the type of field e.g. sign in, sign up, forgot password, etc. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["E"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["E"];
     /** Used for the EMAIL label */
 
     this.label = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__["T"].EMAIL_LABEL;
@@ -894,9 +886,7 @@ function () {
 
 var amplifyFormSectionCss = "amplify-form-section{--header-color:var(--amplify-secondary-color);--header-size:var(--amplify-text-md-sub);--subtitle-size:var(--amplify-grey);--subtitle-color:var(--amplify-grey);--footer-color:var(--amplify-grey);--footer-size:var(--amplify-text-sm);--font-family:var(--amplify-font-family);--font-weight:var(--amplify-font-weight)}.form-section-header{margin:1rem 0 1.5rem 0}.form-section-header .header{color:var(--header-color);font-size:var(--header-size);font-weight:700;margin-bottom:0.75rem}.form-section-header .subtitle{font-weight:400;font-size:var(--amplify-text-sm);color:var(--subtitle-color)}.form-section-footer{font-family:var(--font-family);font-weight:var(--font-weight);font-size:var(--footer-size);color:var(--footer-color);display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:distribute;justify-content:space-around}@media (min-width: 672px){.form-section-footer{display:-ms-flexbox;display:flex;-ms-flex-direction:row-reverse;flex-direction:row-reverse;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:baseline;align-items:baseline}}.form-section-footer *+*{margin-top:15px}";
 
-var AmplifyFormSection =
-/** @class */
-function () {
+var AmplifyFormSection = function () {
   function AmplifyFormSection(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** (Optional) Used as a the default value within the default footer slot */
@@ -947,14 +937,12 @@ function () {
 
 AmplifyFormSection.style = amplifyFormSectionCss;
 
-var AmplifyPasswordField =
-/** @class */
-function () {
+var AmplifyPasswordField = function () {
   function AmplifyPasswordField(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Based on the type of field e.g. sign in, sign up, forgot password, etc. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["l"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["k"];
     /** Used for the password label */
 
     this.label = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__["T"].PASSWORD_LABEL;
@@ -987,14 +975,12 @@ function () {
 
 var amplifyPhoneFieldCss = ".phone-field{display:-ms-inline-flexbox;display:inline-flex;-ms-flex-align:start;align-items:flex-start;width:100%}.phone-field input{border-left:none;border-radius:0 3px 3px 0}";
 
-var AmplifyPhoneField =
-/** @class */
-function () {
+var AmplifyPhoneField = function () {
   function AmplifyPhoneField(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Based on the type of field e.g. sign in, sign up, forgot password, etc. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["b"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["b"];
     /** Used for the Phone label */
 
     this.label = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__["T"].PHONE_LABEL;
@@ -1040,9 +1026,7 @@ var DEFAULT_SELECT_OPTION = [{
 }];
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('amplify-select');
 
-var AmplifySelect =
-/** @class */
-function () {
+var AmplifySelect = function () {
   function AmplifySelect(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** The options of the select input. Must be an Array of Objects with an Object shape of {label: string, value: string|number} */
@@ -1107,14 +1091,12 @@ function () {
 
 AmplifySelect.style = amplifySelectCss;
 
-var AmplifyUsernameField =
-/** @class */
-function () {
+var AmplifyUsernameField = function () {
   function AmplifyUsernameField(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Based on the type of field e.g. sign in, sign up, forgot password, etc. */
 
-    this.fieldId = _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["m"];
+    this.fieldId = _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["l"];
     /** Used for the username label */
 
     this.label = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__["T"].USERNAME_LABEL;

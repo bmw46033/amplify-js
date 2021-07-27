@@ -1392,7 +1392,7 @@ let AmplifyTotpSetup = class AmplifyTotpSetup {
     }
 };
 AmplifyTotpSetup.decorators = [
-    { type: Component, args: [{ selector: 'amplify-totp-setup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['handleAuthStateChange', 'headerText', 'issuer', 'user'] },] },
+    { type: Component, args: [{ selector: 'amplify-totp-setup', changeDetection: ChangeDetectionStrategy.OnPush, template: '<ng-content></ng-content>', inputs: ['handleAuthStateChange', 'handleComplete', 'headerText', 'issuer', 'standalone', 'user'] },] },
 ];
 /** @nocollapse */
 AmplifyTotpSetup.ctorParameters = () => [
@@ -1401,7 +1401,7 @@ AmplifyTotpSetup.ctorParameters = () => [
     { type: NgZone }
 ];
 AmplifyTotpSetup = __decorate([
-    ProxyCmp({ inputs: ['handleAuthStateChange', 'headerText', 'issuer', 'user'] }),
+    ProxyCmp({ inputs: ['handleAuthStateChange', 'handleComplete', 'headerText', 'issuer', 'standalone', 'user'] }),
     __metadata("design:paramtypes", [ChangeDetectorRef, ElementRef, NgZone])
 ], AmplifyTotpSetup);
 let AmplifyUsernameField = class AmplifyUsernameField {

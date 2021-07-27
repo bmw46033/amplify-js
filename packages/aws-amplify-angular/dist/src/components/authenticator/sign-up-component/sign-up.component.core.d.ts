@@ -30,11 +30,11 @@ export declare class SignUpComponentCore implements OnInit {
     defaultCountryCode: string;
     protected logger: any;
     constructor(amplifyService: AmplifyService);
-    data: any;
+    set data(data: any);
     hide: string[];
-    usernameAttributes: string;
-    authState: AuthState;
-    signUpConfig: any;
+    set usernameAttributes(usernameAttributes: string);
+    set authState(authState: AuthState);
+    set signUpConfig(signUpConfig: any);
     ngOnInit(): void;
     shouldHide(comp: any): boolean;
     onSignUp(): void;

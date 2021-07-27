@@ -22,9 +22,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var amplifyPickerCss = ".picker{position:relative;display:-ms-flexbox;display:flex;-ms-flex-pack:center;justify-content:center;-ms-flex-align:center;align-items:center}input[type=file]{width:100%;height:100%;display:inline-block;position:absolute;left:0;top:0;opacity:0;cursor:pointer}";
 
-var AmplifyPicker =
-/** @class */
-function () {
+var AmplifyPicker = function () {
   function AmplifyPicker(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Picker button text */

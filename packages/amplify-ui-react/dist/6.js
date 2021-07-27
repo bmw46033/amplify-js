@@ -17,9 +17,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
-/* harmony import */ var _auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-e49f583d.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
+/* harmony import */ var _auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-c42c7a9e.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -177,9 +177,7 @@ var authSlotNames = (_a = {}, _a[_auth_types_caf635db_js__WEBPACK_IMPORTED_MODUL
 var amplifyAuthenticatorCss = ":host{--background-color:var(--amplify-background-color);--width:28.75rem;--min-width:20rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;--box-shadow:1px 1px 4px 0 rgba(0, 0, 0, 0.15);--border-radius:6px;--padding:35px 40px;--margin-bottom:20px;--container-height:100vh;--container-display:flex;--container-justify:center;--container-align:center}.auth-container{display:var(--container-display);-ms-flex-pack:var(--container-justify);justify-content:var(--container-justify);-ms-flex-align:var(--container-align);align-items:var(--container-align);min-height:var(--container-height)}";
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('Authenticator');
 
-var AmplifyAuthenticator =
-/** @class */
-function () {
+var AmplifyAuthenticator = function () {
   function class_1(hostRef) {
     var _this = this;
 
@@ -203,14 +201,14 @@ function () {
       switch (payload.event) {
         case 'cognitoHostedUI':
         case 'signIn':
-          Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["c"])(payload.data, _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"]);
+          Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["c"])(payload.data, _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"]);
           break;
 
         case 'cognitoHostedUI_failure':
         case 'parsingUrl_failure':
         case 'signOut':
         case 'customGreetingSignOut':
-          return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"])(_this.initialAuthState);
+          return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"])(_this.initialAuthState);
       }
     };
 
@@ -218,7 +216,7 @@ function () {
       var payload = _a.payload;
 
       switch (payload.event) {
-        case _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["T"]:
+        case _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["T"]:
           if (payload.message) _this.toastMessage = payload.message;
           break;
       }
@@ -232,13 +230,13 @@ function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["o"])(function (authState, authData) {
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["o"])(function (authState, authData) {
               _this.onAuthStateChange(authState, authData);
 
               _this.toastMessage = '';
             });
-            if (!this.hideToast) _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].listen(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["U"], this.handleToastEvent);
-            _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].listen(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["A"], this.handleExternalAuthEvent);
+            if (!this.hideToast) _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].listen(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["U"], this.handleToastEvent);
+            _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].listen(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["A"], this.handleExternalAuthEvent);
             Object(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["appendToCognitoUserAgent"])('amplify-authenticator');
             return [4
             /*yield*/
@@ -261,13 +259,13 @@ function () {
 
       return __generator(this, function (_a) {
         if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser !== 'function') {
-          throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+          throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
         }
 
         return [2
         /*return*/
         , _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser().then(function (user) {
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"])(_auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["A"].SignedIn, user);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"])(_auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["A"].SignedIn, user);
         })["catch"](function () {
           return __awaiter(_this, void 0, void 0, function () {
             var cachedAuthState, error_1;
@@ -277,7 +275,7 @@ function () {
                   cachedAuthState = null;
 
                   try {
-                    cachedAuthState = localStorage.getItem(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["c"]);
+                    cachedAuthState = localStorage.getItem(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["c"]);
                   } catch (error) {
                     logger.debug('Failed to get the auth state from local storage', error);
                   }
@@ -300,7 +298,7 @@ function () {
                   _a.label = 3;
 
                 case 3:
-                  Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this.initialAuthState);
+                  Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"])(this.initialAuthState);
                   return [3
                   /*break*/
                   , 5];
@@ -423,9 +421,9 @@ function () {
   };
 
   class_1.prototype.disconnectedCallback = function () {
-    _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].remove(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["A"], this.handleExternalAuthEvent);
-    if (!this.hideToast) _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].remove(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["U"], this.handleToastEvent);
-    return _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["o"];
+    _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].remove(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["A"], this.handleExternalAuthEvent);
+    if (!this.hideToast) _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Hub"].remove(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["U"], this.handleToastEvent);
+    return _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["o"];
   };
 
   class_1.prototype.render = function () {
@@ -459,9 +457,9 @@ AmplifyAuthenticator.style = amplifyAuthenticatorCss;
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js":
+/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js":
 /*!**********************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js ***!
   \**********************************************************************/
 /*! exports provided: c, h */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -476,8 +474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -636,7 +634,7 @@ function checkContact(user, handleAuthStateChange) {
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].verifiedContact !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           } // If `user` is a federated user, we shouldn't call `verifiedContact`
           // since `user` isn't `CognitoUser`
 
@@ -673,7 +671,7 @@ function checkContact(user, handleAuthStateChange) {
 
         case 3:
           error_1 = _a.sent();
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
           return [3
           /*break*/
           , 4];
@@ -694,7 +692,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].signIn !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           }
 
           _a.label = 1;
@@ -789,7 +787,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
             }
           }
 
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
           return [3
           /*break*/
           , 10];

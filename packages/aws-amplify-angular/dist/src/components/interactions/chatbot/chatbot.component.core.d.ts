@@ -25,10 +25,10 @@ export declare class ChatbotComponentCore implements OnInit {
     protected logger: any;
     complete: EventEmitter<string>;
     constructor(ref: ChangeDetectorRef, amplifyService: AmplifyService);
-    data: any;
-    bot: string;
-    title: string;
-    clearOnComplete: boolean;
+    set data(data: any);
+    set bot(botName: string);
+    set title(title: string);
+    set clearOnComplete(clearComplete: boolean);
     ngOnInit(): void;
     performOnComplete(evt: any): void;
     onInputChange(value: string): void;

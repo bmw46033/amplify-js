@@ -11,10 +11,10 @@ export declare class PhotoPickerComponentCore implements OnInit {
     errorMessage: string;
     protected logger: any;
     constructor(amplifyService: AmplifyService);
-    url: string;
-    storageOptions: any;
-    path: string;
-    data: any;
+    set url(url: string);
+    set storageOptions(storageOptions: any);
+    set path(path: string);
+    set data(data: any);
     picked: EventEmitter<string>;
     loaded: EventEmitter<string>;
     uploaded: EventEmitter<Object>;

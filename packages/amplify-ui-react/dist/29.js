@@ -17,7 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -169,9 +169,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('SelectMFAType');
 
-var AmplifySelectMFAType =
-/** @class */
-function () {
+var AmplifySelectMFAType = function () {
   function class_1(hostRef) {
     var _this = this;
 
@@ -247,7 +245,7 @@ function () {
             user = this.authData;
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].setPreferredMFA !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -272,7 +270,7 @@ function () {
             error_1 = _a.sent();
             message = error_1.message;
 
-            if (message === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["f"] || message === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["g"]) {
+            if (message === _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["f"] || message === _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["g"]) {
               this.TOTPSetup = true;
               this.selectMessage = _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].SETUP_TOTP_REQUIRED);
             } else {

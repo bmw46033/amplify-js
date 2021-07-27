@@ -27149,11 +27149,11 @@ var UsernameAlias;
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js":
+/***/ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js":
 /*!*******************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/constants-71263f97.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/constants-56d75870.js ***!
   \*******************************************************************/
-/*! exports provided: A, C, E, N, P, S, T, U, a, b, c, d, e, f, g, h, i, j, k, l, m */
+/*! exports provided: A, C, E, N, P, T, U, a, b, c, d, e, f, g, h, i, j, k, l */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27163,7 +27163,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return EMAIL_SUFFIX; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return NO_AUTH_MODULE_FOUND; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return PHONE_EMPTY_ERROR_MESSAGE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return SETUP_TOTP; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return TOAST_AUTH_ERROR_EVENT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return UI_AUTH_CHANNEL; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AUTH_STATE_CHANGE_EVENT; });
@@ -27174,11 +27173,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return USER_NOT_SETUP_SOFTWARE_TOKEN_MFA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return USER_NOT_VERIFIED_SOFTWARE_TOKEN_MFA; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return COUNTRY_DIAL_CODE_DEFAULT; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return SUCCESS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return AUTH_SOURCE_KEY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return CODE_SUFFIX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return PASSWORD_SUFFIX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return USERNAME_SUFFIX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return AUTH_SOURCE_KEY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return CODE_SUFFIX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return PASSWORD_SUFFIX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return USERNAME_SUFFIX; });
 // Dictionaries
 // fieldId constants
 var USERNAME_SUFFIX = 'username';
@@ -27196,14 +27194,10 @@ var AUTHENTICATOR_AUTHSTATE = 'amplify-authenticator-authState'; // Error messag
 var PHONE_EMPTY_ERROR_MESSAGE = 'Phone number can not be empty';
 var NO_AUTH_MODULE_FOUND = 'No Auth module found, please ensure @aws-amplify/auth is imported';
 var NO_STORAGE_MODULE_FOUND = 'No Storage module found, please ensure @aws-amplify/storage is imported';
-var NO_INTERACTIONS_MODULE_FOUND = 'No Interactions module found, please ensure @aws-amplify/interactions is imported'; // TOTP Messages
-
-var SETUP_TOTP = 'SETUP_TOTP'; // Select MFA Types Messages
+var NO_INTERACTIONS_MODULE_FOUND = 'No Interactions module found, please ensure @aws-amplify/interactions is imported'; // Select MFA Types Messages
 
 var USER_NOT_SETUP_SOFTWARE_TOKEN_MFA = 'User has not set up software token mfa';
-var USER_NOT_VERIFIED_SOFTWARE_TOKEN_MFA = 'User has not verified software token mfa'; // Common events
-
-var SUCCESS = 'SUCCESS'; // Hub Events and Channels
+var USER_NOT_VERIFIED_SOFTWARE_TOKEN_MFA = 'User has not verified software token mfa'; // Hub Events and Channels
 
 var AUTH_CHANNEL = 'auth';
 var UI_AUTH_CHANNEL = 'UI Auth';
@@ -27213,9 +27207,9 @@ var AUTH_STATE_CHANGE_EVENT = 'AuthStateChange';
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js":
+/***/ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js":
 /*!*****************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/helpers-b936deac.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js ***!
   \*****************************************************************/
 /*! exports provided: a, b, c, d, e, g, h, i, o */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -27237,7 +27231,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -27409,15 +27403,15 @@ var closestElement = function closestElement(selector, base) {
 };
 
 var dispatchToastHubEvent = function dispatchToastHubEvent(error) {
-  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].dispatch(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["U"], {
-    event: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["T"],
+  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].dispatch(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["U"], {
+    event: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["T"],
     message: _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["I18n"].get(error.message)
   });
 };
 
 var dispatchAuthStateChangeEvent = function dispatchAuthStateChangeEvent(nextAuthState, data) {
-  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].dispatch(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["U"], {
-    event: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["a"],
+  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].dispatch(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["U"], {
+    event: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["a"],
     message: nextAuthState,
     data: data
   });
@@ -27425,7 +27419,7 @@ var dispatchAuthStateChangeEvent = function dispatchAuthStateChangeEvent(nextAut
 
 var composePhoneNumberInput = function composePhoneNumberInput(phoneNumber) {
   if (!phoneNumber.phoneNumberValue) {
-    throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["P"]);
+    throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["P"]);
   }
 
   var sanitizedPhoneNumberValue = phoneNumber.phoneNumberValue.replace(/[-()\s]/g, '');
@@ -27450,7 +27444,7 @@ var onAuthUIStateChange = function onAuthUIStateChange(authStateHandler) {
             _a = payload.event;
 
             switch (_a) {
-              case _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["a"]:
+              case _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["a"]:
                 return [3
                 /*break*/
                 , 1];
@@ -27513,13 +27507,13 @@ var onAuthUIStateChange = function onAuthUIStateChange(authStateHandler) {
     });
   };
 
-  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].listen(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["U"], authUIStateHandler);
+  _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].listen(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["U"], authUIStateHandler);
 
   var unsubscribe = function unsubscribe() {
     // Replace user's `authStateHandler` with a noop so that we don't trigger side-effects during the async `authUIStateHandler` when unsubscribed
     authStateHandler = function authStateHandler() {};
 
-    _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].remove(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["U"], authUIStateHandler);
+    _aws_amplify_core__WEBPACK_IMPORTED_MODULE_0__["Hub"].remove(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["U"], authUIStateHandler);
   };
 
   return unsubscribe;
@@ -27611,11 +27605,11 @@ function handlePhoneNumberChange(event, phoneNumber) {
    * them together.
    */
 
-  if (name === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["C"]) {
+  if (name === _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["C"]) {
     phoneNumber.countryDialCodeValue = value;
   }
 
-  if (name === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["b"]) {
+  if (name === _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["b"]) {
     phoneNumber.phoneNumberValue = value;
   }
 }
@@ -27916,9 +27910,9 @@ var hostListenerProxy = function hostListenerProxy(hostRef, methodName) {
       if (hostRef.$flags$ & 256
       /* isListenReady */
       ) {
-          // instance is ready, let's call it's member method for this event
-          hostRef.$lazyInstance$[methodName](ev);
-        } else {
+        // instance is ready, let's call it's member method for this event
+        hostRef.$lazyInstance$[methodName](ev);
+      } else {
         (hostRef.$queuedListeners$ = hostRef.$queuedListeners$ || []).push([methodName, ev]);
       }
     }
@@ -28034,22 +28028,22 @@ var attachStyles = function attachStyles(hostRef) {
   if (flags & 10
   /* needsScopedEncapsulation */
   ) {
-      // only required when we're NOT using native shadow dom (slot)
-      // or this browser doesn't support native shadow dom
-      // and this host element was NOT created with SSR
-      // let's pick out the inner content for slot projection
-      // create a node to represent where the original
-      // content was first placed, which is useful later on
-      // DOM WRITE!!
-      elm['s-sc'] = scopeId;
-      elm.classList.add(scopeId + '-h');
+    // only required when we're NOT using native shadow dom (slot)
+    // or this browser doesn't support native shadow dom
+    // and this host element was NOT created with SSR
+    // let's pick out the inner content for slot projection
+    // create a node to represent where the original
+    // content was first placed, which is useful later on
+    // DOM WRITE!!
+    elm['s-sc'] = scopeId;
+    elm.classList.add(scopeId + '-h');
 
-      if (flags & 2
-      /* scopedCssEncapsulation */
-      ) {
-          elm.classList.add(scopeId + '-s');
-        }
+    if (flags & 2
+    /* scopedCssEncapsulation */
+    ) {
+      elm.classList.add(scopeId + '-s');
     }
+  }
 
   endAttachStyles();
 };
@@ -28410,9 +28404,9 @@ var createElm = function createElm(oldParentVNode, newParentVNode, childIndex, p
   } else if (newVNode.$flags$ & 1
   /* isSlotReference */
   ) {
-      // create a slot reference node
-      elm = newVNode.$elm$ = doc.createTextNode('');
-    } else {
+    // create a slot reference node
+    elm = newVNode.$elm$ = doc.createTextNode('');
+  } else {
     if (!isSvgMode) {
       isSvgMode = newVNode.$tag$ === 'svg';
     } // create element
@@ -28760,47 +28754,47 @@ var updateFallbackSlotVisibility = function updateFallbackSlotVisibility(elm) {
     if (childNode.nodeType === 1
     /* ElementNode */
     ) {
-        if (childNode['s-sr']) {
-          // this is a slot fallback node
-          // get the slot name for this slot reference node
-          slotNameAttr = childNode['s-sn']; // by default always show a fallback slot node
-          // then hide it if there are other slots in the light dom
+      if (childNode['s-sr']) {
+        // this is a slot fallback node
+        // get the slot name for this slot reference node
+        slotNameAttr = childNode['s-sn']; // by default always show a fallback slot node
+        // then hide it if there are other slots in the light dom
 
-          childNode.hidden = false;
+        childNode.hidden = false;
 
-          for (j = 0; j < ilen; j++) {
-            if (childNodes[j]['s-hn'] !== childNode['s-hn']) {
-              // this sibling node is from a different component
-              nodeType = childNodes[j].nodeType;
+        for (j = 0; j < ilen; j++) {
+          if (childNodes[j]['s-hn'] !== childNode['s-hn']) {
+            // this sibling node is from a different component
+            nodeType = childNodes[j].nodeType;
 
-              if (slotNameAttr !== '') {
-                // this is a named fallback slot node
-                if (nodeType === 1
-                /* ElementNode */
-                && slotNameAttr === childNodes[j].getAttribute('slot')) {
-                  childNode.hidden = true;
-                  break;
-                }
-              } else {
-                // this is a default fallback slot node
-                // any element or text node (with content)
-                // should hide the default fallback slot node
-                if (nodeType === 1
-                /* ElementNode */
-                || nodeType === 3
-                /* TextNode */
-                && childNodes[j].textContent.trim() !== '') {
-                  childNode.hidden = true;
-                  break;
-                }
+            if (slotNameAttr !== '') {
+              // this is a named fallback slot node
+              if (nodeType === 1
+              /* ElementNode */
+              && slotNameAttr === childNodes[j].getAttribute('slot')) {
+                childNode.hidden = true;
+                break;
+              }
+            } else {
+              // this is a default fallback slot node
+              // any element or text node (with content)
+              // should hide the default fallback slot node
+              if (nodeType === 1
+              /* ElementNode */
+              || nodeType === 3
+              /* TextNode */
+              && childNodes[j].textContent.trim() !== '') {
+                childNode.hidden = true;
+                break;
               }
             }
           }
-        } // keep drilling down
+        }
+      } // keep drilling down
 
 
-        updateFallbackSlotVisibility(childNode);
-      }
+      updateFallbackSlotVisibility(childNode);
+    }
   }
 };
 
@@ -28886,8 +28880,8 @@ var relocateSlotContent = function relocateSlotContent(elm) {
     if (childNode.nodeType === 1
     /* ElementNode */
     ) {
-        relocateSlotContent(childNode);
-      }
+      relocateSlotContent(childNode);
+    }
   }
 };
 
@@ -28895,16 +28889,16 @@ var isNodeLocatedInSlot = function isNodeLocatedInSlot(nodeToRelocate, slotNameA
   if (nodeToRelocate.nodeType === 1
   /* ElementNode */
   ) {
-      if (nodeToRelocate.getAttribute('slot') === null && slotNameAttr === '') {
-        return true;
-      }
-
-      if (nodeToRelocate.getAttribute('slot') === slotNameAttr) {
-        return true;
-      }
-
-      return false;
+    if (nodeToRelocate.getAttribute('slot') === null && slotNameAttr === '') {
+      return true;
     }
+
+    if (nodeToRelocate.getAttribute('slot') === slotNameAttr) {
+      return true;
+    }
+
+    return false;
+  }
 
   if (nodeToRelocate['s-sn'] === slotNameAttr) {
     return true;
@@ -29018,8 +29012,8 @@ var renderVdom = function renderVdom(hostRef, renderFnResults) {
           if (nodeToRelocate.nodeType === 1
           /* ElementNode */
           ) {
-              nodeToRelocate.hidden = true;
-            }
+            nodeToRelocate.hidden = true;
+          }
         }
       }
     }
@@ -29086,11 +29080,11 @@ var scheduleUpdate = function scheduleUpdate(hostRef, isInitialLoad) {
   if (hostRef.$flags$ & 4
   /* isWaitingForChildren */
   ) {
-      hostRef.$flags$ |= 512
-      /* needsRerender */
-      ;
-      return;
-    }
+    hostRef.$flags$ |= 512
+    /* needsRerender */
+    ;
+    return;
+  }
 
   attachToAncestor(hostRef, hostRef.$ancestorComponent$); // there is no ancestorc omponent or the ancestor component
   // has already fired off its lifecycle update then
@@ -29256,10 +29250,10 @@ var postUpdateComponent = function postUpdateComponent(hostRef) {
     if (hostRef.$flags$ & 512
     /* needsRerender */
     ) {
-        nextTick(function () {
-          return scheduleUpdate(hostRef, false);
-        });
-      }
+      nextTick(function () {
+        return scheduleUpdate(hostRef, false);
+      });
+    }
 
     hostRef.$flags$ &= ~(4
     /* isWaitingForChildren */
@@ -29283,8 +29277,8 @@ var forceUpdate = function forceUpdate(ref) {
     )) === 2
     /* hasRendered */
     ) {
-        scheduleUpdate(hostRef, false);
-      } // Returns "true" when the forced update was successfully scheduled
+      scheduleUpdate(hostRef, false);
+    } // Returns "true" when the forced update was successfully scheduled
 
 
     return isConnected;
@@ -29337,25 +29331,25 @@ var parsePropertyValue = function parsePropertyValue(propValue, propType) {
     if (propType & 4
     /* Boolean */
     ) {
-        // per the HTML spec, any string value means it is a boolean true value
-        // but we'll cheat here and say that the string "false" is the boolean false
-        return propValue === 'false' ? false : propValue === '' || !!propValue;
-      }
+      // per the HTML spec, any string value means it is a boolean true value
+      // but we'll cheat here and say that the string "false" is the boolean false
+      return propValue === 'false' ? false : propValue === '' || !!propValue;
+    }
 
     if (propType & 2
     /* Number */
     ) {
-        // force it to be a number
-        return parseFloat(propValue);
-      }
+      // force it to be a number
+      return parseFloat(propValue);
+    }
 
     if (propType & 1
     /* String */
     ) {
-        // could have been passed as a number or boolean
-        // but we still want it as a string
-        return String(propValue);
-      } // redundant return here for better minification
+      // could have been passed as a number or boolean
+      // but we still want it as a string
+      return String(propValue);
+    } // redundant return here for better minification
 
 
     return propValue;
@@ -29391,20 +29385,20 @@ var setValue = function setValue(ref, propName, newVal, cmpMeta) {
         if (flags & 128
         /* isWatchReady */
         ) {
-            var watchMethods = cmpMeta.$watchers$[propName];
+          var watchMethods = cmpMeta.$watchers$[propName];
 
-            if (watchMethods) {
-              // this instance is watching for when this property changed
-              watchMethods.map(function (watchMethodName) {
-                try {
-                  // fire off each of the watch methods that are watching this property
-                  instance[watchMethodName](newVal, oldVal, propName);
-                } catch (e) {
-                  consoleError(e);
-                }
-              });
-            }
+          if (watchMethods) {
+            // this instance is watching for when this property changed
+            watchMethods.map(function (watchMethodName) {
+              try {
+                // fire off each of the watch methods that are watching this property
+                instance[watchMethodName](newVal, oldVal, propName);
+              } catch (e) {
+                consoleError(e);
+              }
+            });
           }
+        }
       }
 
       if ((flags & (2
@@ -29414,12 +29408,12 @@ var setValue = function setValue(ref, propName, newVal, cmpMeta) {
       )) === 2
       /* hasRendered */
       ) {
-          // looks like this value actually changed, so we've got work to do!
-          // but only if we've already rendered, otherwise just chill out
-          // queue that we need to do an update, but don't worry about queuing
-          // up millions cuz this function ensures it only runs once
-          scheduleUpdate(hostRef, false);
-        }
+        // looks like this value actually changed, so we've got work to do!
+        // but only if we've already rendered, otherwise just chill out
+        // queue that we need to do an update, but don't worry about queuing
+        // up millions cuz this function ensures it only runs once
+        scheduleUpdate(hostRef, false);
+      }
     }
   }
 };
@@ -29444,53 +29438,53 @@ var proxyComponent = function proxyComponent(Cstr, cmpMeta, flags) {
       && memberFlags & 32
       /* State */
       ) {
-          // proxyComponent - prop
-          Object.defineProperty(prototype_1, memberName, {
-            get: function get() {
-              // proxyComponent, get value
-              return getValue(this, memberName);
-            },
-            set: function set(newValue) {
-              // proxyComponent, set value
-              setValue(this, memberName, newValue, cmpMeta);
-            },
-            configurable: true,
-            enumerable: true
-          });
-        }
+        // proxyComponent - prop
+        Object.defineProperty(prototype_1, memberName, {
+          get: function get() {
+            // proxyComponent, get value
+            return getValue(this, memberName);
+          },
+          set: function set(newValue) {
+            // proxyComponent, set value
+            setValue(this, memberName, newValue, cmpMeta);
+          },
+          configurable: true,
+          enumerable: true
+        });
+      }
     });
 
     if (flags & 1
     /* isElementConstructor */
     ) {
-        var attrNameToPropName_1 = new Map();
+      var attrNameToPropName_1 = new Map();
 
-        prototype_1.attributeChangedCallback = function (attrName, _oldValue, newValue) {
-          var _this = this;
+      prototype_1.attributeChangedCallback = function (attrName, _oldValue, newValue) {
+        var _this = this;
 
-          plt.jmp(function () {
-            var propName = attrNameToPropName_1.get(attrName);
-            _this[propName] = newValue === null && typeof _this[propName] === 'boolean' ? false : newValue;
-          });
-        }; // create an array of attributes to observe
-        // and also create a map of html attribute name to js property name
-
-
-        Cstr.observedAttributes = members.filter(function (_a) {
-          var _ = _a[0],
-              m = _a[1];
-          return m[0] & 15;
-        }
-        /* HasAttribute */
-        ) // filter to only keep props that should match attributes
-        .map(function (_a) {
-          var propName = _a[0],
-              m = _a[1];
-          var attrName = m[1] || propName;
-          attrNameToPropName_1.set(attrName, propName);
-          return attrName;
+        plt.jmp(function () {
+          var propName = attrNameToPropName_1.get(attrName);
+          _this[propName] = newValue === null && typeof _this[propName] === 'boolean' ? false : newValue;
         });
+      }; // create an array of attributes to observe
+      // and also create a map of html attribute name to js property name
+
+
+      Cstr.observedAttributes = members.filter(function (_a) {
+        var _ = _a[0],
+            m = _a[1];
+        return m[0] & 15;
       }
+      /* HasAttribute */
+      ) // filter to only keep props that should match attributes
+      .map(function (_a) {
+        var propName = _a[0],
+            m = _a[1];
+        var attrName = m[1] || propName;
+        attrNameToPropName_1.set(attrName, propName);
+        return attrName;
+      });
+    }
   }
 
   return Cstr;
@@ -29584,8 +29578,8 @@ var initializeComponent = function initializeComponent(elm, hostRef, cmpMeta, hm
           if (!(cmpMeta.$flags$ & 8)
           /* needsShadowDomShim */
           ) return [3
-            /*break*/
-            , 4];
+          /*break*/
+          , 4];
           /* needsShadowDomShim */
 
           return [4
@@ -29789,16 +29783,14 @@ var bootstrapLazy = function bootstrapLazy(lazyBundles, options) {
       if (!supportsShadow && cmpMeta.$flags$ & 1
       /* shadowDomEncapsulation */
       ) {
-          cmpMeta.$flags$ |= 8
-          /* needsShadowDomShim */
-          ;
-        }
+        cmpMeta.$flags$ |= 8
+        /* needsShadowDomShim */
+        ;
+      }
 
       var tagName = cmpMeta.$tagName$;
 
-      var HostElement =
-      /** @class */
-      function (_super) {
+      var HostElement = function (_super) {
         __extends(HostElement, _super); // StencilLazyHost
 
 
@@ -29812,20 +29804,20 @@ var bootstrapLazy = function bootstrapLazy(lazyBundles, options) {
           if (cmpMeta.$flags$ & 1
           /* shadowDomEncapsulation */
           ) {
-              // this component is using shadow dom
-              // and this browser supports shadow dom
-              // add the read-only property "shadowRoot" to the host element
-              // adding the shadow root build conditionals to minimize runtime
-              if (supportsShadow) {
-                {
-                  self.attachShadow({
-                    mode: 'open'
-                  });
-                }
-              } else if (!('shadowRoot' in self)) {
-                self.shadowRoot = self;
+            // this component is using shadow dom
+            // and this browser supports shadow dom
+            // add the read-only property "shadowRoot" to the host element
+            // adding the shadow root build conditionals to minimize runtime
+            if (supportsShadow) {
+              {
+                self.attachShadow({
+                  mode: 'open'
+                });
               }
+            } else if (!('shadowRoot' in self)) {
+              self.shadowRoot = self;
             }
+          }
 
           return _this;
         }
@@ -29972,8 +29964,8 @@ var queueTask = function queueTask(queue, write) {
       if (write && plt.$flags$ & 4
       /* queueSync */
       ) {
-          nextTick(flush);
-        } else {
+        nextTick(flush);
+      } else {
         plt.raf(flush);
       }
     }
@@ -30081,17 +30073,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Translations", function() { return _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"]; });
 
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AUTH_CHANNEL", function() { return _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["A"]; });
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AUTH_CHANNEL", function() { return _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["A"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AUTH_STATE_CHANGE_EVENT", function() { return _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "AUTH_STATE_CHANGE_EVENT", function() { return _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["a"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TOAST_AUTH_ERROR_EVENT", function() { return _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["T"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "TOAST_AUTH_ERROR_EVENT", function() { return _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["T"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UI_AUTH_CHANNEL", function() { return _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["U"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "UI_AUTH_CHANNEL", function() { return _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["U"]; });
 
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onAuthUIStateChange", function() { return _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["o"]; });
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "onAuthUIStateChange", function() { return _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["o"]; });
 
 
 
@@ -30124,7 +30116,7 @@ var defineCustomElements = function (win, options) {
     if (typeof window === 'undefined')
         return Promise.resolve();
     return Object(_theme_824c0267_js__WEBPACK_IMPORTED_MODULE_1__["a"])().then(function () {
-        return Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["amplify-icon", [[2, "amplify-icon", { "name": [1] }]]], ["amplify-authenticator", [[1, "amplify-authenticator", { "initialAuthState": [1, "initial-auth-state"], "federated": [16], "usernameAlias": [1, "username-alias"], "handleAuthStateChange": [16], "hideToast": [4, "hide-toast"], "authState": [32], "authData": [32], "toastMessage": [32] }]]], ["amplify-federated-sign-in", [[1, "amplify-federated-sign-in", { "authState": [1, "auth-state"], "federated": [8] }]]], ["amplify-select-mfa-type", [[1, "amplify-select-mfa-type", { "MFATypes": [16], "authData": [16], "handleSubmit": [16], "TOTPSetup": [32], "selectMessage": [32], "MFAMethod": [32], "isTOTP": [32], "isNoMFA": [32], "isSMS": [32], "loading": [32], "isToastVisible": [32] }]]], ["amplify-s3-image-picker", [[4, "amplify-s3-image-picker", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "headerTitle": [1, "header-title"], "headerHint": [1, "header-hint"], "placeholderHint": [1, "placeholder-hint"], "buttonText": [1, "button-text"], "src": [32] }]]], ["amplify-chatbot", [[1, "amplify-chatbot", { "botName": [1, "bot-name"], "clearOnComplete": [4, "clear-on-complete"], "conversationModeOn": [4, "conversation-mode-on"], "welcomeMessage": [1, "welcome-message"], "botTitle": [1, "bot-title"], "voiceEnabled": [4, "voice-enabled"], "textEnabled": [4, "text-enabled"], "silenceTime": [2, "silence-time"], "silenceThreshold": [2, "silence-threshold"], "messages": [32], "text": [32], "chatState": [32], "error": [32] }, [[0, "formSubmit", "submitHandler"]]]]], ["amplify-greetings", [[1, "amplify-greetings", { "username": [1], "logo": [16], "handleAuthStateChange": [16] }]]], ["amplify-s3-album", [[1, "amplify-s3-album", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "filter": [16], "sort": [16], "picker": [4], "handleOnLoad": [16], "handleOnError": [16], "pickerText": [1, "picker-text"], "albumItems": [32] }]]], ["amplify-s3-text-picker", [[1, "amplify-s3-text-picker", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "fallbackText": [1, "fallback-text"], "src": [32] }]]], ["amplify-icon-button", [[1, "amplify-icon-button", { "name": [1], "tooltip": [1], "autoShowTooltip": [4, "auto-show-tooltip"] }]]], ["amplify-checkbox", [[1, "amplify-checkbox", { "name": [1], "value": [1], "fieldId": [1, "field-id"], "label": [1], "checked": [4], "disabled": [4] }]]], ["amplify-auth-container", [[4, "amplify-auth-container"]]], ["amplify-container", [[4, "amplify-container"]]], ["amplify-link", [[1, "amplify-link", { "role": [1] }]]], ["amplify-photo-picker", [[1, "amplify-photo-picker", { "headerTitle": [1, "header-title"], "headerHint": [1, "header-hint"], "placeholderHint": [1, "placeholder-hint"], "buttonText": [1, "button-text"], "previewSrc": [1, "preview-src"], "handleClick": [16], "previewState": [32], "file": [32] }]]], ["amplify-s3-image", [[1, "amplify-s3-image", { "imgKey": [1, "img-key"], "path": [1], "alt": [1], "body": [16], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "handleOnLoad": [16], "handleOnError": [16], "imgProps": [16], "src": [32] }]]], ["amplify-s3-text", [[1, "amplify-s3-text", { "textKey": [1, "text-key"], "path": [1], "body": [16], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fallbackText": [1, "fallback-text"], "src": [32] }]]], ["amplify-tooltip", [[1, "amplify-tooltip", { "text": [1], "shouldAutoShow": [4, "should-auto-show"] }]]], ["amplify-nav_2", [[1, "amplify-sign-out", { "handleAuthStateChange": [16], "buttonText": [1, "button-text"] }], [1, "amplify-nav"]]], ["amplify-picker", [[1, "amplify-picker", { "pickerText": [1, "picker-text"], "acceptValue": [1, "accept-value"], "inputHandler": [16] }]]], ["amplify-federated-buttons_2", [[6, "amplify-strike"], [1, "amplify-federated-buttons", { "authState": [1, "auth-state"], "federated": [16], "handleAuthStateChange": [16] }]]], ["amplify-form-field_4", [[4, "amplify-form-field", { "fieldId": [1, "field-id"], "label": [1], "description": [1], "hint": [1], "type": [1], "required": [4], "handleInputChange": [16], "placeholder": [1], "name": [1], "value": [1], "inputProps": [16], "disabled": [4] }], [1, "amplify-hint"], [0, "amplify-input", { "fieldId": [1, "field-id"], "description": [1], "type": [1], "handleInputChange": [16], "placeholder": [1], "name": [1], "value": [1], "inputProps": [16], "disabled": [4], "required": [4], "autoCompleted": [32] }], [4, "amplify-label", { "htmlFor": [1, "html-for"] }]]], ["amplify-auth-fields_9", [[0, "amplify-auth-fields", { "formFields": [16] }], [0, "amplify-phone-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "dialCode": [8, "dial-code"] }], [0, "amplify-code-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4] }], [0, "amplify-email-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "hint": [1] }], [0, "amplify-password-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4] }], [0, "amplify-username-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "hint": [1] }], [1, "amplify-country-dial-code", { "fieldId": [1, "field-id"], "options": [16], "handleInputChange": [16], "dialCode": [8, "dial-code"] }], [1, "amplify-select", { "options": [16], "fieldId": [1, "field-id"], "handleInputChange": [16], "selected": [8] }], [4, "amplify-form-section", { "handleSubmit": [16], "submitButtonText": [1, "submit-button-text"], "headerText": [1, "header-text"], "testDataPrefix": [1, "test-data-prefix"], "loading": [4], "secondaryFooterContent": [1, "secondary-footer-content"] }, [[0, "formSubmit", "handleFormSubmit"]]]]], ["amplify-radio-button_3", [[1, "amplify-totp-setup", { "user": [16], "handleAuthStateChange": [16], "headerText": [1, "header-text"], "issuer": [1], "code": [32], "setupMessage": [32], "qrCodeImageSource": [32], "qrCodeInput": [32], "loading": [32] }], [0, "amplify-radio-button", { "handleInputChange": [16], "name": [1], "value": [1], "placeholder": [1], "fieldId": [1, "field-id"], "label": [1], "checked": [4], "disabled": [4], "inputProps": [16] }], [1, "amplify-toast", { "handleClose": [16], "message": [1] }]]], ["amplify-sign-in-button", [[6, "amplify-sign-in-button", { "provider": [1] }]]], ["amplify-amazon-button_5", [[1, "amplify-amazon-button", { "clientId": [1, "client-id"], "handleAuthStateChange": [16] }], [1, "amplify-auth0-button", { "config": [16], "handleAuthStateChange": [16] }], [1, "amplify-facebook-button", { "appId": [1, "app-id"], "handleAuthStateChange": [16] }], [1, "amplify-google-button", { "handleAuthStateChange": [16], "clientId": [1, "client-id"] }], [1, "amplify-oauth-button", { "config": [16] }]]], ["amplify-button_3", [[1, "amplify-loading-spinner"], [4, "amplify-section", { "role": [1] }], [4, "amplify-button", { "type": [1], "variant": [1], "handleButtonClick": [16], "disabled": [4], "icon": [1] }]]], ["amplify-confirm-sign-in_7", [[1, "amplify-sign-in", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "federated": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "formFields": [16], "hideSignUp": [4, "hide-sign-up"], "loading": [32], "signInAttributes": [32] }], [1, "amplify-confirm-sign-in", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "handleAuthStateChange": [16], "formFields": [16], "user": [16], "mfaOption": [32], "loading": [32], "code": [32] }], [1, "amplify-confirm-sign-up", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "formFields": [16], "handleAuthStateChange": [16], "user": [16], "usernameAlias": [1, "username-alias"], "code": [32], "loading": [32], "userInput": [32] }], [1, "amplify-forgot-password", { "headerText": [1, "header-text"], "sendButtonText": [1, "send-button-text"], "submitButtonText": [1, "submit-button-text"], "formFields": [16], "handleSend": [16], "handleSubmit": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "delivery": [32], "loading": [32], "forgotPasswordAttrs": [32] }], [1, "amplify-require-new-password", { "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "handleSubmit": [16], "handleAuthStateChange": [16], "user": [16], "formFields": [16], "password": [32], "loading": [32] }], [1, "amplify-sign-up", { "handleSubmit": [16], "handleSignUp": [16], "validationErrors": [1, "validation-errors"], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "haveAccountText": [1, "have-account-text"], "signInText": [1, "sign-in-text"], "formFields": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "loading": [32], "signUpAttributes": [32] }], [1, "amplify-verify-contact", { "handleAuthStateChange": [16], "user": [16], "verifyAttr": [32], "loading": [32], "code": [32], "contact": [32] }]]]], options);
+        return Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["b"])([["amplify-icon", [[2, "amplify-icon", { "name": [1] }]]], ["amplify-authenticator", [[1, "amplify-authenticator", { "initialAuthState": [1, "initial-auth-state"], "federated": [16], "usernameAlias": [1, "username-alias"], "handleAuthStateChange": [16], "hideToast": [4, "hide-toast"], "authState": [32], "authData": [32], "toastMessage": [32] }]]], ["amplify-federated-sign-in", [[1, "amplify-federated-sign-in", { "authState": [1, "auth-state"], "federated": [8] }]]], ["amplify-select-mfa-type", [[1, "amplify-select-mfa-type", { "MFATypes": [16], "authData": [16], "handleSubmit": [16], "TOTPSetup": [32], "selectMessage": [32], "MFAMethod": [32], "isTOTP": [32], "isNoMFA": [32], "isSMS": [32], "loading": [32], "isToastVisible": [32] }]]], ["amplify-s3-image-picker", [[4, "amplify-s3-image-picker", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "headerTitle": [1, "header-title"], "headerHint": [1, "header-hint"], "placeholderHint": [1, "placeholder-hint"], "buttonText": [1, "button-text"], "src": [32] }]]], ["amplify-chatbot", [[1, "amplify-chatbot", { "botName": [1, "bot-name"], "clearOnComplete": [4, "clear-on-complete"], "conversationModeOn": [4, "conversation-mode-on"], "welcomeMessage": [1, "welcome-message"], "botTitle": [1, "bot-title"], "voiceEnabled": [4, "voice-enabled"], "textEnabled": [4, "text-enabled"], "silenceTime": [2, "silence-time"], "silenceThreshold": [2, "silence-threshold"], "messages": [32], "text": [32], "chatState": [32], "error": [32] }, [[0, "formSubmit", "submitHandler"]]]]], ["amplify-greetings", [[1, "amplify-greetings", { "username": [1], "logo": [16], "handleAuthStateChange": [16] }]]], ["amplify-s3-album", [[1, "amplify-s3-album", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "filter": [16], "sort": [16], "picker": [4], "handleOnLoad": [16], "handleOnError": [16], "pickerText": [1, "picker-text"], "albumItems": [32] }]]], ["amplify-s3-text-picker", [[1, "amplify-s3-text-picker", { "path": [1], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fileToKey": [16], "fallbackText": [1, "fallback-text"], "src": [32] }]]], ["amplify-icon-button", [[1, "amplify-icon-button", { "name": [1], "tooltip": [1], "autoShowTooltip": [4, "auto-show-tooltip"] }]]], ["amplify-checkbox", [[1, "amplify-checkbox", { "name": [1], "value": [1], "fieldId": [1, "field-id"], "label": [1], "checked": [4], "disabled": [4] }]]], ["amplify-auth-container", [[4, "amplify-auth-container"]]], ["amplify-container", [[4, "amplify-container"]]], ["amplify-link", [[1, "amplify-link", { "role": [1] }]]], ["amplify-photo-picker", [[1, "amplify-photo-picker", { "headerTitle": [1, "header-title"], "headerHint": [1, "header-hint"], "placeholderHint": [1, "placeholder-hint"], "buttonText": [1, "button-text"], "previewSrc": [1, "preview-src"], "handleClick": [16], "previewState": [32], "file": [32] }]]], ["amplify-s3-image", [[1, "amplify-s3-image", { "imgKey": [1, "img-key"], "path": [1], "alt": [1], "body": [16], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "handleOnLoad": [16], "handleOnError": [16], "imgProps": [16], "src": [32] }]]], ["amplify-s3-text", [[1, "amplify-s3-text", { "textKey": [1, "text-key"], "path": [1], "body": [16], "contentType": [1, "content-type"], "level": [1], "track": [4], "identityId": [1, "identity-id"], "fallbackText": [1, "fallback-text"], "src": [32] }]]], ["amplify-tooltip", [[1, "amplify-tooltip", { "text": [1], "shouldAutoShow": [4, "should-auto-show"] }]]], ["amplify-nav_2", [[1, "amplify-sign-out", { "handleAuthStateChange": [16], "buttonText": [1, "button-text"] }], [1, "amplify-nav"]]], ["amplify-picker", [[1, "amplify-picker", { "pickerText": [1, "picker-text"], "acceptValue": [1, "accept-value"], "inputHandler": [16] }]]], ["amplify-federated-buttons_2", [[6, "amplify-strike"], [1, "amplify-federated-buttons", { "authState": [1, "auth-state"], "federated": [16], "handleAuthStateChange": [16] }]]], ["amplify-form-field_4", [[4, "amplify-form-field", { "fieldId": [1, "field-id"], "label": [1], "description": [1], "hint": [1], "type": [1], "required": [4], "handleInputChange": [16], "placeholder": [1], "name": [1], "value": [1], "inputProps": [16], "disabled": [4] }], [1, "amplify-hint"], [0, "amplify-input", { "fieldId": [1, "field-id"], "description": [1], "type": [1], "handleInputChange": [16], "placeholder": [1], "name": [1], "value": [1], "inputProps": [16], "disabled": [4], "required": [4], "autoCompleted": [32] }], [4, "amplify-label", { "htmlFor": [1, "html-for"] }]]], ["amplify-auth-fields_9", [[0, "amplify-auth-fields", { "formFields": [16] }], [0, "amplify-phone-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "dialCode": [8, "dial-code"] }], [0, "amplify-code-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4] }], [0, "amplify-email-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "hint": [1] }], [0, "amplify-password-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "hint": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4] }], [0, "amplify-username-field", { "fieldId": [1, "field-id"], "label": [1], "placeholder": [1], "required": [4], "handleInputChange": [16], "value": [1], "inputProps": [16], "disabled": [4], "hint": [1] }], [1, "amplify-country-dial-code", { "fieldId": [1, "field-id"], "options": [16], "handleInputChange": [16], "dialCode": [8, "dial-code"] }], [1, "amplify-select", { "options": [16], "fieldId": [1, "field-id"], "handleInputChange": [16], "selected": [8] }], [4, "amplify-form-section", { "handleSubmit": [16], "submitButtonText": [1, "submit-button-text"], "headerText": [1, "header-text"], "testDataPrefix": [1, "test-data-prefix"], "loading": [4], "secondaryFooterContent": [1, "secondary-footer-content"] }, [[0, "formSubmit", "handleFormSubmit"]]]]], ["amplify-radio-button_3", [[1, "amplify-totp-setup", { "user": [16], "handleAuthStateChange": [16], "headerText": [1, "header-text"], "issuer": [1], "handleComplete": [16], "standalone": [4], "code": [32], "setupMessage": [32], "qrCodeImageSource": [32], "qrCodeInput": [32], "loading": [32] }], [0, "amplify-radio-button", { "handleInputChange": [16], "name": [1], "value": [1], "placeholder": [1], "fieldId": [1, "field-id"], "label": [1], "checked": [4], "disabled": [4], "inputProps": [16] }], [1, "amplify-toast", { "handleClose": [16], "message": [1] }]]], ["amplify-sign-in-button", [[6, "amplify-sign-in-button", { "provider": [1] }]]], ["amplify-amazon-button_5", [[1, "amplify-amazon-button", { "clientId": [1, "client-id"], "handleAuthStateChange": [16] }], [1, "amplify-auth0-button", { "config": [16], "handleAuthStateChange": [16] }], [1, "amplify-facebook-button", { "appId": [1, "app-id"], "handleAuthStateChange": [16] }], [1, "amplify-google-button", { "handleAuthStateChange": [16], "clientId": [1, "client-id"] }], [1, "amplify-oauth-button", { "config": [16] }]]], ["amplify-button_3", [[1, "amplify-loading-spinner"], [4, "amplify-section", { "role": [1] }], [4, "amplify-button", { "type": [1], "variant": [1], "handleButtonClick": [16], "disabled": [4], "icon": [1] }]]], ["amplify-confirm-sign-in_7", [[1, "amplify-sign-in", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "federated": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "formFields": [16], "hideSignUp": [4, "hide-sign-up"], "loading": [32], "signInAttributes": [32] }], [1, "amplify-confirm-sign-in", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "handleAuthStateChange": [16], "formFields": [16], "user": [16], "mfaOption": [32], "loading": [32], "code": [32] }], [1, "amplify-confirm-sign-up", { "handleSubmit": [16], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "formFields": [16], "handleAuthStateChange": [16], "user": [16], "usernameAlias": [1, "username-alias"], "code": [32], "loading": [32], "userInput": [32] }], [1, "amplify-forgot-password", { "headerText": [1, "header-text"], "sendButtonText": [1, "send-button-text"], "submitButtonText": [1, "submit-button-text"], "formFields": [16], "handleSend": [16], "handleSubmit": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "delivery": [32], "loading": [32], "forgotPasswordAttrs": [32] }], [1, "amplify-require-new-password", { "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "handleSubmit": [16], "handleAuthStateChange": [16], "user": [16], "formFields": [16], "password": [32], "loading": [32] }], [1, "amplify-sign-up", { "handleSubmit": [16], "handleSignUp": [16], "validationErrors": [1, "validation-errors"], "headerText": [1, "header-text"], "submitButtonText": [1, "submit-button-text"], "haveAccountText": [1, "have-account-text"], "signInText": [1, "sign-in-text"], "formFields": [16], "handleAuthStateChange": [16], "usernameAlias": [1, "username-alias"], "loading": [32], "signUpAttributes": [32] }], [1, "amplify-verify-contact", { "handleAuthStateChange": [16], "user": [16], "verifyAttr": [32], "loading": [32], "code": [32], "contact": [32] }]]]], options);
     });
 };
 
@@ -30210,19 +30202,19 @@ var patchBrowser = function patchBrowser() {
   if ('onbeforeload' in scriptElm && !history.scrollRestoration
   /* IS_ESM_BUILD */
   ) {
-      // Safari < v11 support: This IF is true if it's Safari below v11.
-      // This fn cannot use async/await since Safari didn't support it until v11,
-      // however, Safari 10 did support modules. Safari 10 also didn't support "nomodule",
-      // so both the ESM file and nomodule file would get downloaded. Only Safari
-      // has 'onbeforeload' in the script, and "history.scrollRestoration" was added
-      // to Safari in v11. Return a noop then() so the async/await ESM code doesn't continue.
-      // IS_ESM_BUILD is replaced at build time so this check doesn't happen in systemjs builds.
-      return {
-        then: function then() {
-          /* promise noop */
-        }
-      };
-    }
+    // Safari < v11 support: This IF is true if it's Safari below v11.
+    // This fn cannot use async/await since Safari didn't support it until v11,
+    // however, Safari 10 did support modules. Safari 10 also didn't support "nomodule",
+    // so both the ESM file and nomodule file would get downloaded. Only Safari
+    // has 'onbeforeload' in the script, and "history.scrollRestoration" was added
+    // to Safari in v11. Return a noop then() so the async/await ESM code doesn't continue.
+    // IS_ESM_BUILD is replaced at build time so this check doesn't happen in systemjs builds.
+    return {
+      then: function then() {
+        /* promise noop */
+      }
+    };
+  }
 
   {
     opts.resourcesUrl = new URL('.', new URL(scriptElm.getAttribute('data-resources-url') || scriptElm.src, _index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["w"].location.href)).href;
@@ -30591,9 +30583,7 @@ var index_1 = __webpack_require__(/*! ./utils/index */ "./lib/react-component-li
 exports.createReactComponent = function (tagName) {
   var displayName = index_1.dashToPascalCase(tagName);
 
-  var ReactComponent =
-  /** @class */
-  function (_super) {
+  var ReactComponent = function (_super) {
     __extends(class_1, _super);
 
     function class_1(props) {
@@ -30887,105 +30877,102 @@ var attachEventProps_1 = __webpack_require__(/*! ./utils/attachEventProps */ "./
 
 function createControllerComponent(displayName, controller) {
   var dismissEventName = "on" + displayName + "DidDismiss";
-  return (
-    /** @class */
-    function (_super) {
-      __extends(ReactControllerComponent, _super);
+  return function (_super) {
+    __extends(ReactControllerComponent, _super);
 
-      function ReactControllerComponent(props) {
-        return _super.call(this, props) || this;
-      }
+    function ReactControllerComponent(props) {
+      return _super.call(this, props) || this;
+    }
 
-      Object.defineProperty(ReactControllerComponent, "displayName", {
-        get: function get() {
-          return displayName;
-        },
-        enumerable: true,
-        configurable: true
+    Object.defineProperty(ReactControllerComponent, "displayName", {
+      get: function get() {
+        return displayName;
+      },
+      enumerable: true,
+      configurable: true
+    });
+
+    ReactControllerComponent.prototype.componentDidMount = function () {
+      return __awaiter(this, void 0, void 0, function () {
+        var isOpen;
+        return __generator(this, function (_a) {
+          isOpen = this.props.isOpen;
+
+          if (isOpen) {
+            this.present();
+          }
+
+          return [2
+          /*return*/
+          ];
+        });
       });
+    };
 
-      ReactControllerComponent.prototype.componentDidMount = function () {
-        return __awaiter(this, void 0, void 0, function () {
-          var isOpen;
-          return __generator(this, function (_a) {
-            isOpen = this.props.isOpen;
+    ReactControllerComponent.prototype.componentDidUpdate = function (prevProps) {
+      return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+          switch (_a.label) {
+            case 0:
+              if (prevProps.isOpen !== this.props.isOpen && this.props.isOpen === true) {
+                this.present(prevProps);
+              }
 
-            if (isOpen) {
-              this.present();
-            }
+              if (!(this.controller && prevProps.isOpen !== this.props.isOpen && this.props.isOpen === false)) return [3
+              /*break*/
+              , 2];
+              return [4
+              /*yield*/
+              , this.controller.dismiss()];
 
-            return [2
-            /*return*/
-            ];
-          });
+            case 1:
+              _a.sent();
+
+              _a.label = 2;
+
+            case 2:
+              return [2
+              /*return*/
+              ];
+          }
         });
-      };
+      });
+    };
 
-      ReactControllerComponent.prototype.componentDidUpdate = function (prevProps) {
-        return __awaiter(this, void 0, void 0, function () {
-          return __generator(this, function (_a) {
-            switch (_a.label) {
-              case 0:
-                if (prevProps.isOpen !== this.props.isOpen && this.props.isOpen === true) {
-                  this.present(prevProps);
-                }
+    ReactControllerComponent.prototype.present = function (prevProps) {
+      return __awaiter(this, void 0, void 0, function () {
+        var _a, isOpen, onDidDismiss, cProps, elementProps, _b;
 
-                if (!(this.controller && prevProps.isOpen !== this.props.isOpen && this.props.isOpen === false)) return [3
-                /*break*/
-                , 2];
-                return [4
-                /*yield*/
-                , this.controller.dismiss()];
+        var _c;
 
-              case 1:
-                _a.sent();
+        return __generator(this, function (_d) {
+          switch (_d.label) {
+            case 0:
+              _a = this.props, isOpen = _a.isOpen, onDidDismiss = _a.onDidDismiss, cProps = __rest(_a, ["isOpen", "onDidDismiss"]);
+              elementProps = __assign(__assign({}, cProps), (_c = {}, _c[dismissEventName] = onDidDismiss, _c));
+              _b = this;
+              return [4
+              /*yield*/
+              , controller.create(__assign({}, elementProps))];
 
-                _a.label = 2;
-
-              case 2:
-                return [2
-                /*return*/
-                ];
-            }
-          });
+            case 1:
+              _b.controller = _d.sent();
+              attachEventProps_1.attachEventProps(this.controller, elementProps, prevProps);
+              this.controller.present();
+              return [2
+              /*return*/
+              ];
+          }
         });
-      };
+      });
+    };
 
-      ReactControllerComponent.prototype.present = function (prevProps) {
-        return __awaiter(this, void 0, void 0, function () {
-          var _a, isOpen, onDidDismiss, cProps, elementProps, _b;
+    ReactControllerComponent.prototype.render = function () {
+      return null;
+    };
 
-          var _c;
-
-          return __generator(this, function (_d) {
-            switch (_d.label) {
-              case 0:
-                _a = this.props, isOpen = _a.isOpen, onDidDismiss = _a.onDidDismiss, cProps = __rest(_a, ["isOpen", "onDidDismiss"]);
-                elementProps = __assign(__assign({}, cProps), (_c = {}, _c[dismissEventName] = onDidDismiss, _c));
-                _b = this;
-                return [4
-                /*yield*/
-                , controller.create(__assign({}, elementProps))];
-
-              case 1:
-                _b.controller = _d.sent();
-                attachEventProps_1.attachEventProps(this.controller, elementProps, prevProps);
-                this.controller.present();
-                return [2
-                /*return*/
-                ];
-            }
-          });
-        });
-      };
-
-      ReactControllerComponent.prototype.render = function () {
-        return null;
-      };
-
-      return ReactControllerComponent;
-    }(react_1["default"].Component)
-  );
+    return ReactControllerComponent;
+  }(react_1["default"].Component);
 }
 
 exports.createControllerComponent = createControllerComponent;
@@ -31218,100 +31205,97 @@ var attachEventProps_1 = __webpack_require__(/*! ./utils/attachEventProps */ "./
 
 function createOverlayComponent(displayName, controller) {
   var dismissEventName = "on" + displayName + "DidDismiss";
-  return (
-    /** @class */
-    function (_super) {
-      __extends(ReactOverlayComponent, _super);
+  return function (_super) {
+    __extends(ReactOverlayComponent, _super);
 
-      function ReactOverlayComponent(props) {
-        var _this = _super.call(this, props) || this;
+    function ReactOverlayComponent(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.el = document.createElement('div');
-        return _this;
+      _this.el = document.createElement('div');
+      return _this;
+    }
+
+    Object.defineProperty(ReactOverlayComponent, "displayName", {
+      get: function get() {
+        return displayName;
+      },
+      enumerable: true,
+      configurable: true
+    });
+
+    ReactOverlayComponent.prototype.componentDidMount = function () {
+      if (this.props.isOpen) {
+        this.present();
       }
+    };
 
-      Object.defineProperty(ReactOverlayComponent, "displayName", {
-        get: function get() {
-          return displayName;
-        },
-        enumerable: true,
-        configurable: true
+    ReactOverlayComponent.prototype.componentDidUpdate = function (prevProps) {
+      return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+          switch (_a.label) {
+            case 0:
+              if (prevProps.isOpen !== this.props.isOpen && this.props.isOpen === true) {
+                this.present(prevProps);
+              }
+
+              if (!(this.controller && prevProps.isOpen !== this.props.isOpen && this.props.isOpen === false)) return [3
+              /*break*/
+              , 2];
+              return [4
+              /*yield*/
+              , this.controller.dismiss()];
+
+            case 1:
+              _a.sent();
+
+              _a.label = 2;
+
+            case 2:
+              return [2
+              /*return*/
+              ];
+          }
+        });
       });
+    };
 
-      ReactOverlayComponent.prototype.componentDidMount = function () {
-        if (this.props.isOpen) {
-          this.present();
-        }
-      };
+    ReactOverlayComponent.prototype.present = function (prevProps) {
+      return __awaiter(this, void 0, void 0, function () {
+        var _a, children, isOpen, _b, onDidDismiss, cProps, elementProps, _c;
 
-      ReactOverlayComponent.prototype.componentDidUpdate = function (prevProps) {
-        return __awaiter(this, void 0, void 0, function () {
-          return __generator(this, function (_a) {
-            switch (_a.label) {
-              case 0:
-                if (prevProps.isOpen !== this.props.isOpen && this.props.isOpen === true) {
-                  this.present(prevProps);
-                }
+        var _d;
 
-                if (!(this.controller && prevProps.isOpen !== this.props.isOpen && this.props.isOpen === false)) return [3
-                /*break*/
-                , 2];
-                return [4
-                /*yield*/
-                , this.controller.dismiss()];
+        return __generator(this, function (_e) {
+          switch (_e.label) {
+            case 0:
+              _a = this.props, children = _a.children, isOpen = _a.isOpen, _b = _a.onDidDismiss, onDidDismiss = _b === void 0 ? function () {} : _b, cProps = __rest(_a, ["children", "isOpen", "onDidDismiss"]);
+              elementProps = __assign(__assign({}, cProps), (_d = {}, _d[dismissEventName] = onDidDismiss, _d));
+              _c = this;
+              return [4
+              /*yield*/
+              , controller.create(__assign(__assign({}, elementProps), {
+                component: this.el,
+                componentProps: {}
+              }))];
 
-              case 1:
-                _a.sent();
-
-                _a.label = 2;
-
-              case 2:
-                return [2
-                /*return*/
-                ];
-            }
-          });
+            case 1:
+              _c.controller = _e.sent();
+              attachEventProps_1.attachEventProps(this.controller, elementProps, prevProps);
+              this.controller.present();
+              return [2
+              /*return*/
+              ];
+          }
         });
-      };
+      });
+    };
 
-      ReactOverlayComponent.prototype.present = function (prevProps) {
-        return __awaiter(this, void 0, void 0, function () {
-          var _a, children, isOpen, _b, onDidDismiss, cProps, elementProps, _c;
+    ReactOverlayComponent.prototype.render = function () {
+      return react_dom_1["default"].createPortal(this.props.children, this.el);
+    };
 
-          var _d;
-
-          return __generator(this, function (_e) {
-            switch (_e.label) {
-              case 0:
-                _a = this.props, children = _a.children, isOpen = _a.isOpen, _b = _a.onDidDismiss, onDidDismiss = _b === void 0 ? function () {} : _b, cProps = __rest(_a, ["children", "isOpen", "onDidDismiss"]);
-                elementProps = __assign(__assign({}, cProps), (_d = {}, _d[dismissEventName] = onDidDismiss, _d));
-                _c = this;
-                return [4
-                /*yield*/
-                , controller.create(__assign(__assign({}, elementProps), {
-                  component: this.el,
-                  componentProps: {}
-                }))];
-
-              case 1:
-                _c.controller = _e.sent();
-                attachEventProps_1.attachEventProps(this.controller, elementProps, prevProps);
-                this.controller.present();
-                return [2
-                /*return*/
-                ];
-            }
-          });
-        });
-      };
-
-      ReactOverlayComponent.prototype.render = function () {
-        return react_dom_1["default"].createPortal(this.props.children, this.el);
-      };
-
-      return ReactOverlayComponent;
-    }(react_1["default"].Component)
-  );
+    return ReactOverlayComponent;
+  }(react_1["default"].Component);
 }
 
 exports.createOverlayComponent = createOverlayComponent;

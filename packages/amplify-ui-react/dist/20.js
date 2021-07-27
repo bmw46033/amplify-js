@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./auth-types-caf635db.js */ "../amplify-ui-components/dist/esm-es5/auth-types-caf635db.js");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 
 
 
@@ -24,9 +24,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-federated-sign-in');
 
-var AmplifyFederatedSignIn =
-/** @class */
-function () {
+var AmplifyFederatedSignIn = function () {
   function AmplifyFederatedSignIn(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** The current authentication state. */
@@ -39,7 +37,7 @@ function () {
 
   AmplifyFederatedSignIn.prototype.componentWillLoad = function () {
     if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].configure !== 'function') {
-      throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+      throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
     }
 
     var _a = _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].configure().oauth,

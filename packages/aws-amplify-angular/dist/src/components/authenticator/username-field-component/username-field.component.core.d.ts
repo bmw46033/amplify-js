@@ -7,9 +7,9 @@ export declare class UsernameFieldComponentCore implements OnInit {
     _placeholder: string;
     username: string;
     constructor(amplifyService: AmplifyService);
-    data: any;
-    usernameAttributes: string;
-    placeholder: string;
+    set data(data: any);
+    set usernameAttributes(usernameAttributes: string);
+    set placeholder(placeholder: string);
     usernameFieldChanged: EventEmitter<UsernameFieldOutput>;
     ngOnInit(): void;
     ngOnDestroy(): void;

@@ -16,7 +16,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 /* harmony import */ var _aws_amplify_interactions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @aws-amplify/interactions */ "@aws-amplify/interactions");
 /* harmony import */ var _aws_amplify_interactions__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_interactions__WEBPACK_IMPORTED_MODULE_5__);
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
@@ -344,9 +344,7 @@ var exportBuffer = function exportBuffer(recBuffer, recLength, recordSampleRate,
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('AudioRecorder');
 
-var AudioRecorder =
-/** @class */
-function () {
+var AudioRecorder = function () {
   function AudioRecorder(options) {
     // input mic stream is stored in a buffer
     this.streamBuffer = [];
@@ -739,9 +737,7 @@ var ChatErrorType;
   ChatErrorType[ChatErrorType["Unrecoverable"] = 1] = "Unrecoverable";
 })(ChatErrorType || (ChatErrorType = {}));
 
-var AmplifyChatbot =
-/** @class */
-function () {
+var AmplifyChatbot = function () {
   function class_1(hostRef) {
     var _this = this;
 
@@ -820,7 +816,7 @@ function () {
 
   class_1.prototype.componentWillLoad = function () {
     if (!_aws_amplify_interactions__WEBPACK_IMPORTED_MODULE_5__["Interactions"] || typeof _aws_amplify_interactions__WEBPACK_IMPORTED_MODULE_5__["Interactions"].onComplete !== 'function') {
-      throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["d"]);
+      throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["d"]);
     }
 
     this.validateProps();

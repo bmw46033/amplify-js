@@ -17,12 +17,12 @@ export declare class ForgotPasswordComponentCore implements OnInit {
     country_code: string;
     email: string;
     constructor(amplifyService: AmplifyService);
-    data: any;
+    set data(data: any);
     hide: string[];
     shouldHide(comp: any): boolean;
-    authState: AuthState;
+    set authState(authState: AuthState);
     ngOnInit(): void;
-    usernameAttributes: string;
+    set usernameAttributes(usernameAttributes: string);
     setCode(code: string): void;
     setPassword(password: string): void;
     getforgotPwUsername(): string;

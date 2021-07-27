@@ -13,7 +13,7 @@ export declare class SumerianSceneComponentCore implements OnInit, OnDestroy {
     sceneError: any;
     amplifyUI: any;
     protected logger: any;
-    data: any;
+    set data(data: any);
     constructor(amplifyService: AmplifyService);
     ngOnInit(): void;
     ngOnDestroy(): void;

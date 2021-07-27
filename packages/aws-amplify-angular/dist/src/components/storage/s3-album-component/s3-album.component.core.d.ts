@@ -10,8 +10,8 @@ export declare class S3AlbumComponentCore implements OnInit {
     constructor(amplifyService: AmplifyService);
     ngOnInit(): void;
     onImageSelected(event: any): void;
-    data: any;
-    path: string;
-    options: any;
+    set data(data: any);
+    set path(path: string);
+    set options(options: any);
     getList(path: any, options: any): void;
 }

@@ -9,8 +9,8 @@ export declare class ConfirmSignInComponentCore implements OnInit {
     errorMessage: string;
     protected logger: any;
     constructor(amplifyService: AmplifyService);
-    data: any;
-    authState: AuthState;
+    set data(data: any);
+    set authState(authState: AuthState);
     hide: string[];
     ngOnInit(): void;
     shouldHide(comp: any): boolean;

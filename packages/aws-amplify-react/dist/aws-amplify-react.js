@@ -3062,9 +3062,7 @@ var React = __importStar(__webpack_require__(/*! react */ "react"));
 
 var api_1 = __webpack_require__(/*! @aws-amplify/api */ "@aws-amplify/api");
 
-var Connect =
-/** @class */
-function (_super) {
+var Connect = function (_super) {
   __extends(Connect, _super);
 
   function Connect(props) {
@@ -5309,90 +5307,87 @@ function trackLifecycle(Comp, trackerName, events) {
     events = Default_Track_Events;
   }
 
-  return (
-    /** @class */
-    function (_super) {
-      __extends(WithTrackLifecycle, _super);
+  return function (_super) {
+    __extends(WithTrackLifecycle, _super);
 
-      function WithTrackLifecycle(props) {
-        var _this = _super.call(this, props) || this;
+    function WithTrackLifecycle(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.trackerName = trackerName;
-        _this.trackEvents = events;
+      _this.trackerName = trackerName;
+      _this.trackEvents = events;
 
-        _this.track('constructor');
+      _this.track('constructor');
 
-        return _this;
-      }
+      return _this;
+    }
 
-      WithTrackLifecycle.prototype.track = function (event) {
-        var filtered = this.trackEvents.filter(function (item) {
-          return item === event;
-        });
+    WithTrackLifecycle.prototype.track = function (event) {
+      var filtered = this.trackEvents.filter(function (item) {
+        return item === event;
+      });
 
-        if (filtered.length > 0) {
-          if (analytics_1.Analytics && typeof analytics_1.Analytics.record === 'function') {
-            analytics_1.Analytics.record({
-              name: this.trackerName,
-              attributes: {
-                event: event
-              }
-            });
-          } else {
-            throw new Error('No Analytics module found, please ensure @aws-amplify/analytics is imported');
-          }
+      if (filtered.length > 0) {
+        if (analytics_1.Analytics && typeof analytics_1.Analytics.record === 'function') {
+          analytics_1.Analytics.record({
+            name: this.trackerName,
+            attributes: {
+              event: event
+            }
+          });
+        } else {
+          throw new Error('No Analytics module found, please ensure @aws-amplify/analytics is imported');
         }
-      };
+      }
+    };
 
-      WithTrackLifecycle.prototype.componentWillMount = function () {
-        this.track('componentWillMount');
-      };
+    WithTrackLifecycle.prototype.componentWillMount = function () {
+      this.track('componentWillMount');
+    };
 
-      WithTrackLifecycle.prototype.componentDidMount = function () {
-        this.track('componentDidMount');
-      };
+    WithTrackLifecycle.prototype.componentDidMount = function () {
+      this.track('componentDidMount');
+    };
 
-      WithTrackLifecycle.prototype.componentWillUnmount = function () {
-        this.track('componentWillUnmount');
-      };
+    WithTrackLifecycle.prototype.componentWillUnmount = function () {
+      this.track('componentWillUnmount');
+    };
 
-      WithTrackLifecycle.prototype.componentDidCatch = function () {
-        this.track('componentDidCatch');
-      };
+    WithTrackLifecycle.prototype.componentDidCatch = function () {
+      this.track('componentDidCatch');
+    };
 
-      WithTrackLifecycle.prototype.componentWillReceiveProps = function () {
-        this.track('componentWillReceiveProps');
-      };
+    WithTrackLifecycle.prototype.componentWillReceiveProps = function () {
+      this.track('componentWillReceiveProps');
+    };
 
-      WithTrackLifecycle.prototype.shouldComponentUpdate = function () {
-        this.track('shouldComponentUpdate');
-        return true;
-      };
+    WithTrackLifecycle.prototype.shouldComponentUpdate = function () {
+      this.track('shouldComponentUpdate');
+      return true;
+    };
 
-      WithTrackLifecycle.prototype.componentWillUpdate = function () {
-        this.track('componentWillUpdate');
-      };
+    WithTrackLifecycle.prototype.componentWillUpdate = function () {
+      this.track('componentWillUpdate');
+    };
 
-      WithTrackLifecycle.prototype.componentDidUpdate = function () {
-        this.track('componentDidUpdate');
-      };
+    WithTrackLifecycle.prototype.componentDidUpdate = function () {
+      this.track('componentDidUpdate');
+    };
 
-      WithTrackLifecycle.prototype.setState = function () {
-        this.track('setState');
-      };
+    WithTrackLifecycle.prototype.setState = function () {
+      this.track('setState');
+    };
 
-      WithTrackLifecycle.prototype.forceUpdate = function () {
-        this.track('forceUpdate');
-      };
+    WithTrackLifecycle.prototype.forceUpdate = function () {
+      this.track('forceUpdate');
+    };
 
-      WithTrackLifecycle.prototype.render = function () {
-        this.track('render');
-        return React.createElement(Comp, __assign({}, this.props));
-      };
+    WithTrackLifecycle.prototype.render = function () {
+      this.track('render');
+      return React.createElement(Comp, __assign({}, this.props));
+    };
 
-      return WithTrackLifecycle;
-    }(React.Component)
-  );
+    return WithTrackLifecycle;
+  }(React.Component);
 }
 
 exports.trackLifecycle = trackLifecycle;
@@ -5482,38 +5477,35 @@ var React = __importStar(__webpack_require__(/*! react */ "react"));
 var analytics_1 = __webpack_require__(/*! @aws-amplify/analytics */ "@aws-amplify/analytics");
 
 function trackUpdate(Comp, trackerName) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.trackerName = trackerName;
-        return _this;
+      _this.trackerName = trackerName;
+      return _this;
+    }
+
+    class_1.prototype.componentDidUpdate = function (prevProps, prevState) {
+      var attributes = Object.assign({}, this.props, this.state);
+
+      if (analytics_1.Analytics && typeof analytics_1.Analytics.record === 'function') {
+        analytics_1.Analytics.record({
+          name: this.trackerName,
+          attributes: attributes
+        });
+      } else {
+        throw new Error('No Analytics module found, please ensure @aws-amplify/analytics is imported');
       }
+    };
 
-      class_1.prototype.componentDidUpdate = function (prevProps, prevState) {
-        var attributes = Object.assign({}, this.props, this.state);
+    class_1.prototype.render = function () {
+      return React.createElement(Comp, __assign({}, this.props));
+    };
 
-        if (analytics_1.Analytics && typeof analytics_1.Analytics.record === 'function') {
-          analytics_1.Analytics.record({
-            name: this.trackerName,
-            attributes: attributes
-          });
-        } else {
-          throw new Error('No Analytics module found, please ensure @aws-amplify/analytics is imported');
-        }
-      };
-
-      class_1.prototype.render = function () {
-        return React.createElement(Comp, __assign({}, this.props));
-      };
-
-      return class_1;
-    }(React.Component)
-  );
+    return class_1;
+  }(React.Component);
 }
 
 exports.trackUpdate = trackUpdate;
@@ -5622,9 +5614,7 @@ var AmplifyTheme_1 = __importDefault(__webpack_require__(/*! ../AmplifyTheme */ 
 
 var labelMap = (_a = {}, _a[types_1.UsernameAttributes.EMAIL] = 'Email', _a[types_1.UsernameAttributes.PHONE_NUMBER] = 'Phone Number', _a[types_1.UsernameAttributes.USERNAME] = 'Username', _a);
 
-var AuthPiece =
-/** @class */
-function (_super) {
+var AuthPiece = function (_super) {
   __extends(AuthPiece, _super);
 
   function AuthPiece(props) {
@@ -5950,9 +5940,7 @@ exports.EmptyContainer = function (_a) {
   return React.createElement(React.Fragment, null, children);
 };
 
-var Authenticator =
-/** @class */
-function (_super) {
+var Authenticator = function (_super) {
   __extends(Authenticator, _super);
 
   function Authenticator(props) {
@@ -6300,9 +6288,7 @@ var Amplify_UI_Components_React_1 = __webpack_require__(/*! ../Amplify-UI/Amplif
 
 var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-attributes */ "./lib/Amplify-UI/data-test-attributes.js");
 
-var ConfirmSignIn =
-/** @class */
-function (_super) {
+var ConfirmSignIn = function (_super) {
   __extends(ConfirmSignIn, _super);
 
   function ConfirmSignIn(props) {
@@ -6506,9 +6492,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('ConfirmSignUp');
 
-var ConfirmSignUp =
-/** @class */
-function (_super) {
+var ConfirmSignUp = function (_super) {
   __extends(ConfirmSignUp, _super);
 
   function ConfirmSignUp(props) {
@@ -6707,9 +6691,7 @@ var Provider_1 = __webpack_require__(/*! ./Provider */ "./lib/Auth/Provider/inde
 
 var logger = new core_1.ConsoleLogger('FederatedSignIn');
 
-var FederatedButtons =
-/** @class */
-function (_super) {
+var FederatedButtons = function (_super) {
   __extends(FederatedButtons, _super);
 
   function FederatedButtons() {
@@ -6843,9 +6825,7 @@ function (_super) {
 
 exports.FederatedButtons = FederatedButtons;
 
-var FederatedSignIn =
-/** @class */
-function (_super) {
+var FederatedSignIn = function (_super) {
   __extends(FederatedSignIn, _super);
 
   function FederatedSignIn() {
@@ -7004,9 +6984,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('ForgotPassword');
 
-var ForgotPassword =
-/** @class */
-function (_super) {
+var ForgotPassword = function (_super) {
   __extends(ForgotPassword, _super);
 
   function ForgotPassword(props) {
@@ -7270,9 +7248,7 @@ var types_1 = __webpack_require__(/*! ./common/types */ "./lib/Auth/common/types
 
 var logger = new core_1.ConsoleLogger('Greetings');
 
-var Greetings =
-/** @class */
-function (_super) {
+var Greetings = function (_super) {
   __extends(Greetings, _super);
 
   function Greetings(props) {
@@ -7529,9 +7505,7 @@ var Amplify_UI_Components_React_1 = __webpack_require__(/*! ../Amplify-UI/Amplif
 
 var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-attributes */ "./lib/Amplify-UI/data-test-attributes.js");
 
-var Loading =
-/** @class */
-function (_super) {
+var Loading = function (_super) {
   __extends(Loading, _super);
 
   function Loading(props) {
@@ -7631,9 +7605,7 @@ var core_1 = __webpack_require__(/*! @aws-amplify/core */ "@aws-amplify/core");
 
 var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-attributes */ "./lib/Amplify-UI/data-test-attributes.js");
 
-var PhoneField =
-/** @class */
-function (_super) {
+var PhoneField = function (_super) {
   __extends(PhoneField, _super);
 
   function PhoneField(props) {
@@ -7835,24 +7807,21 @@ exports.Auth0Button = withAuth0_2.Auth0Button;
 
 function withFederated(Comp) {
   var Federated = withAuth0_1.withAuth0(withOAuth_1.withOAuth(withAmazon_1.withAmazon(withGoogle_1.withGoogle(withFacebook_1.withFacebook(Comp)))));
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1() {
-        return _super !== null && _super.apply(this, arguments) || this;
-      }
+    function class_1() {
+      return _super !== null && _super.apply(this, arguments) || this;
+    }
 
-      class_1.prototype.render = function () {
-        // @ts-ignore
-        var federated = this.props.federated || {};
-        return React.createElement(Federated, __assign({}, this.props, federated));
-      };
+    class_1.prototype.render = function () {
+      // @ts-ignore
+      var federated = this.props.federated || {};
+      return React.createElement(Federated, __assign({}, this.props, federated));
+    };
 
-      return class_1;
-    }(React.Component)
-  );
+    return class_1;
+  }(React.Component);
 }
 
 exports.withFederated = withFederated;
@@ -7960,133 +7929,130 @@ var constants_1 = __webpack_require__(/*! ../common/constants */ "./lib/Auth/com
 var logger = new core_1.ConsoleLogger('withAmazon');
 
 function withAmazon(Comp) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.initAmazon = _this.initAmazon.bind(_this);
-        _this.signIn = _this.signIn.bind(_this);
-        _this.signOut = _this.signOut.bind(_this);
-        _this.federatedSignIn = _this.federatedSignIn.bind(_this);
-        _this.state = {};
-        return _this;
-      }
+      _this.initAmazon = _this.initAmazon.bind(_this);
+      _this.signIn = _this.signIn.bind(_this);
+      _this.signOut = _this.signOut.bind(_this);
+      _this.federatedSignIn = _this.federatedSignIn.bind(_this);
+      _this.state = {};
+      return _this;
+    }
 
-      class_1.prototype.signIn = function () {
-        var _this = this;
+    class_1.prototype.signIn = function () {
+      var _this = this;
 
-        var amz = window.amazon;
-        var options = {
-          scope: 'profile'
-        };
-        amz.Login.authorize(options, function (response) {
-          if (response.error) {
-            logger.debug('Failed to login with amazon: ' + response.error);
-            return;
-          }
-
-          var payload = {
-            provider: constants_1.Constants.AMAZON
-          };
-
-          try {
-            localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
-          } catch (e) {
-            logger.debug('Failed to cache auth source into localStorage', e);
-          }
-
-          _this.federatedSignIn(response);
-        });
+      var amz = window.amazon;
+      var options = {
+        scope: 'profile'
       };
-
-      class_1.prototype.federatedSignIn = function (response) {
-        var access_token = response.access_token,
-            expires_in = response.expires_in;
-        var onStateChange = this.props.onStateChange;
-        var date = new Date();
-        var expires_at = expires_in * 1000 + date.getTime();
-
-        if (!access_token) {
+      amz.Login.authorize(options, function (response) {
+        if (response.error) {
+          logger.debug('Failed to login with amazon: ' + response.error);
           return;
         }
 
-        var amz = window.amazon;
-        amz.Login.retrieveProfile(function (userInfo) {
-          if (!userInfo.success) {
-            logger.debug('Get user Info failed');
-            return;
-          }
+        var payload = {
+          provider: constants_1.Constants.AMAZON
+        };
 
-          var user = {
-            name: userInfo.profile.Name,
-            email: userInfo.profile.PrimaryEmail
-          };
-
-          if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
-            throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
-          }
-
-          auth_1.Auth.federatedSignIn('amazon', {
-            token: access_token,
-            expires_at: expires_at
-          }, user).then(function (credentials) {
-            return auth_1.Auth.currentAuthenticatedUser();
-          }).then(function (authUser) {
-            if (onStateChange) {
-              onStateChange('signedIn', authUser);
-            }
-          });
-        });
-      };
-
-      class_1.prototype.signOut = function () {
-        var amz = window.amazon;
-
-        if (!amz) {
-          logger.debug('Amazon Login sdk undefined');
-          return Promise.resolve();
+        try {
+          localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
+        } catch (e) {
+          logger.debug('Failed to cache auth source into localStorage', e);
         }
 
-        logger.debug('Amazon signing out');
-        amz.Login.logout();
-      };
+        _this.federatedSignIn(response);
+      });
+    };
 
-      class_1.prototype.componentDidMount = function () {
-        var amazon_client_id = this.props.amazon_client_id;
-        if (amazon_client_id && !window.amazon) this.createScript();
-      };
+    class_1.prototype.federatedSignIn = function (response) {
+      var access_token = response.access_token,
+          expires_in = response.expires_in;
+      var onStateChange = this.props.onStateChange;
+      var date = new Date();
+      var expires_at = expires_in * 1000 + date.getTime();
 
-      class_1.prototype.createScript = function () {
-        var script = document.createElement('script');
-        script.src = 'https://api-cdn.amazon.com/sdk/login1.js';
-        script.async = true;
-        script.onload = this.initAmazon;
-        document.body.appendChild(script);
-      };
+      if (!access_token) {
+        return;
+      }
 
-      class_1.prototype.initAmazon = function () {
-        logger.debug('init amazon');
-        var amazon_client_id = this.props.amazon_client_id;
-        var amz = window.amazon;
-        amz.Login.setClientId(amazon_client_id);
-      };
+      var amz = window.amazon;
+      amz.Login.retrieveProfile(function (userInfo) {
+        if (!userInfo.success) {
+          logger.debug('Get user Info failed');
+          return;
+        }
 
-      class_1.prototype.render = function () {
-        var amz = window.amazon;
-        return React.createElement(Comp, __assign({}, this.props, {
-          amz: amz,
-          amazonSignIn: this.signIn,
-          amazonSignOut: this.signOut
-        }));
-      };
+        var user = {
+          name: userInfo.profile.Name,
+          email: userInfo.profile.PrimaryEmail
+        };
 
-      return class_1;
-    }(React.Component)
-  );
+        if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
+          throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
+        }
+
+        auth_1.Auth.federatedSignIn('amazon', {
+          token: access_token,
+          expires_at: expires_at
+        }, user).then(function (credentials) {
+          return auth_1.Auth.currentAuthenticatedUser();
+        }).then(function (authUser) {
+          if (onStateChange) {
+            onStateChange('signedIn', authUser);
+          }
+        });
+      });
+    };
+
+    class_1.prototype.signOut = function () {
+      var amz = window.amazon;
+
+      if (!amz) {
+        logger.debug('Amazon Login sdk undefined');
+        return Promise.resolve();
+      }
+
+      logger.debug('Amazon signing out');
+      amz.Login.logout();
+    };
+
+    class_1.prototype.componentDidMount = function () {
+      var amazon_client_id = this.props.amazon_client_id;
+      if (amazon_client_id && !window.amazon) this.createScript();
+    };
+
+    class_1.prototype.createScript = function () {
+      var script = document.createElement('script');
+      script.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+      script.async = true;
+      script.onload = this.initAmazon;
+      document.body.appendChild(script);
+    };
+
+    class_1.prototype.initAmazon = function () {
+      logger.debug('init amazon');
+      var amazon_client_id = this.props.amazon_client_id;
+      var amz = window.amazon;
+      amz.Login.setClientId(amazon_client_id);
+    };
+
+    class_1.prototype.render = function () {
+      var amz = window.amazon;
+      return React.createElement(Comp, __assign({}, this.props, {
+        amz: amz,
+        amazonSignIn: this.signIn,
+        amazonSignOut: this.signOut
+      }));
+    };
+
+    return class_1;
+  }(React.Component);
 }
 
 exports.withAmazon = withAmazon;
@@ -8369,166 +8335,163 @@ var constants_1 = __webpack_require__(/*! ../common/constants */ "./lib/Auth/com
 var logger = new core_1.ConsoleLogger('withAuth0');
 
 function withAuth0(Comp, options) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this._auth0 = null;
-        _this.initialize = _this.initialize.bind(_this);
-        _this.signIn = _this.signIn.bind(_this);
-        _this.signOut = _this.signOut.bind(_this);
-        return _this;
+      _this._auth0 = null;
+      _this.initialize = _this.initialize.bind(_this);
+      _this.signIn = _this.signIn.bind(_this);
+      _this.signOut = _this.signOut.bind(_this);
+      return _this;
+    }
+
+    class_1.prototype.componentDidMount = function () {
+      if (!window.auth0) {
+        this.createScript();
+      } else {
+        this.initialize();
+      }
+    };
+
+    class_1.prototype.createScript = function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.auth0.com/js/auth0/9.8.1/auth0.min.js';
+      script.async = true;
+      script.onload = this.initialize;
+      document.body.appendChild(script);
+    };
+
+    class_1.prototype.initialize = function () {
+      var _this = this; // @ts-ignore
+
+
+      var _a = auth_1.Auth.configure().oauth,
+          oauth = _a === void 0 ? {} : _a; // @ts-ignore
+
+      var config = this.props.auth0 || options || oauth.auth0;
+      var _b = this.props,
+          onError = _b.onError,
+          onStateChange = _b.onStateChange,
+          authState = _b.authState;
+
+      if (!config) {
+        logger.debug('Auth0 is not configured');
+        return;
       }
 
-      class_1.prototype.componentDidMount = function () {
-        if (!window.auth0) {
-          this.createScript();
-        } else {
-          this.initialize();
-        }
-      };
+      logger.debug('withAuth0 configuration', config);
 
-      class_1.prototype.createScript = function () {
-        var script = document.createElement('script');
-        script.src = 'https://cdn.auth0.com/js/auth0/9.8.1/auth0.min.js';
-        script.async = true;
-        script.onload = this.initialize;
-        document.body.appendChild(script);
-      };
+      if (!this._auth0) {
+        this._auth0 = new window['auth0'].WebAuth(config);
+        window.auth0_client = this._auth0;
+      }
 
-      class_1.prototype.initialize = function () {
-        var _this = this; // @ts-ignore
+      if (authState !== 'signedIn') {
+        this._auth0.parseHash(function (err, authResult) {
+          if (err || !authResult) {
+            logger.debug('Failed to parse the url for Auth0', err);
+            return;
+          }
 
+          var payload = {
+            provider: constants_1.Constants.AUTH0,
+            opts: {
+              returnTo: config.returnTo,
+              clientID: config.clientID,
+              federated: config.federated
+            }
+          };
 
-        var _a = auth_1.Auth.configure().oauth,
-            oauth = _a === void 0 ? {} : _a; // @ts-ignore
+          try {
+            localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
+          } catch (e) {
+            logger.debug('Failed to cache auth source into localStorage', e);
+          }
 
-        var config = this.props.auth0 || options || oauth.auth0;
-        var _b = this.props,
-            onError = _b.onError,
-            onStateChange = _b.onStateChange,
-            authState = _b.authState;
+          _this._auth0.client.userInfo(authResult.accessToken, function (err, user) {
+            var username = undefined;
+            var email = undefined;
+            var picture = undefined;
 
-        if (!config) {
-          logger.debug('Auth0 is not configured');
-          return;
-        }
-
-        logger.debug('withAuth0 configuration', config);
-
-        if (!this._auth0) {
-          this._auth0 = new window['auth0'].WebAuth(config);
-          window.auth0_client = this._auth0;
-        }
-
-        if (authState !== 'signedIn') {
-          this._auth0.parseHash(function (err, authResult) {
-            if (err || !authResult) {
-              logger.debug('Failed to parse the url for Auth0', err);
-              return;
+            if (err) {
+              logger.debug('Failed to get the user info', err);
+            } else {
+              username = user.name;
+              email = user.email;
+              picture = user.picture;
             }
 
-            var payload = {
-              provider: constants_1.Constants.AUTH0,
-              opts: {
-                returnTo: config.returnTo,
-                clientID: config.clientID,
-                federated: config.federated
+            auth_1.Auth.federatedSignIn(config.domain, {
+              token: authResult.idToken,
+              expires_at: authResult.expiresIn * 1000 + new Date().getTime()
+            }, {
+              name: username,
+              email: email,
+              picture: picture
+            }).then(function () {
+              if (onStateChange) {
+                auth_1.Auth.currentAuthenticatedUser().then(function (user) {
+                  onStateChange('signedIn', user);
+                });
               }
-            };
-
-            try {
-              localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
-            } catch (e) {
-              logger.debug('Failed to cache auth source into localStorage', e);
-            }
-
-            _this._auth0.client.userInfo(authResult.accessToken, function (err, user) {
-              var username = undefined;
-              var email = undefined;
-              var picture = undefined;
-
-              if (err) {
-                logger.debug('Failed to get the user info', err);
-              } else {
-                username = user.name;
-                email = user.email;
-                picture = user.picture;
-              }
-
-              auth_1.Auth.federatedSignIn(config.domain, {
-                token: authResult.idToken,
-                expires_at: authResult.expiresIn * 1000 + new Date().getTime()
-              }, {
-                name: username,
-                email: email,
-                picture: picture
-              }).then(function () {
-                if (onStateChange) {
-                  auth_1.Auth.currentAuthenticatedUser().then(function (user) {
-                    onStateChange('signedIn', user);
-                  });
-                }
-              })["catch"](function (e) {
-                logger.debug('Failed to get the aws credentials', e);
-                if (onError) onError(e);
-              });
+            })["catch"](function (e) {
+              logger.debug('Failed to get the aws credentials', e);
+              if (onError) onError(e);
             });
           });
-        }
-      };
-
-      class_1.prototype.signIn = function () {
-        return __awaiter(this, void 0, void 0, function () {
-          return __generator(this, function (_a) {
-            if (this._auth0) this._auth0.authorize();else {
-              throw new Error('the auth0 client is not configured');
-            }
-            return [2
-            /*return*/
-            ];
-          });
         });
-      };
+      }
+    };
 
-      class_1.prototype.signOut = function (opts) {
-        if (opts === void 0) {
-          opts = {};
-        }
-
-        var auth0 = window.auth0_client; // @ts-ignore
-
-        var returnTo = opts.returnTo,
-            clientID = opts.clientID,
-            federated = opts.federated;
-
-        if (!auth0) {
-          logger.debug('auth0 sdk undefined');
-          return Promise.resolve();
-        }
-
-        auth0.logout({
-          returnTo: returnTo,
-          clientID: clientID,
-          federated: federated
+    class_1.prototype.signIn = function () {
+      return __awaiter(this, void 0, void 0, function () {
+        return __generator(this, function (_a) {
+          if (this._auth0) this._auth0.authorize();else {
+            throw new Error('the auth0 client is not configured');
+          }
+          return [2
+          /*return*/
+          ];
         });
-      };
+      });
+    };
 
-      class_1.prototype.render = function () {
-        return React.createElement(Comp, __assign({}, this.props, {
-          auth0: this._auth0,
-          auth0SignIn: this.signIn,
-          auth0SignOut: this.signOut
-        }));
-      };
+    class_1.prototype.signOut = function (opts) {
+      if (opts === void 0) {
+        opts = {};
+      }
 
-      return class_1;
-    }(React.Component)
-  );
+      var auth0 = window.auth0_client; // @ts-ignore
+
+      var returnTo = opts.returnTo,
+          clientID = opts.clientID,
+          federated = opts.federated;
+
+      if (!auth0) {
+        logger.debug('auth0 sdk undefined');
+        return Promise.resolve();
+      }
+
+      auth0.logout({
+        returnTo: returnTo,
+        clientID: clientID,
+        federated: federated
+      });
+    };
+
+    class_1.prototype.render = function () {
+      return React.createElement(Comp, __assign({}, this.props, {
+        auth0: this._auth0,
+        auth0SignIn: this.signIn,
+        auth0SignOut: this.signOut
+      }));
+    };
+
+    return class_1;
+  }(React.Component);
 }
 
 exports.withAuth0 = withAuth0;
@@ -8664,161 +8627,158 @@ var constants_1 = __webpack_require__(/*! ../common/constants */ "./lib/Auth/com
 var logger = new core_1.ConsoleLogger('withFacebook');
 
 function withFacebook(Comp) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.fbAsyncInit = _this.fbAsyncInit.bind(_this);
-        _this.initFB = _this.initFB.bind(_this);
-        _this.signIn = _this.signIn.bind(_this);
-        _this.signOut = _this.signOut.bind(_this);
-        _this.federatedSignIn = _this.federatedSignIn.bind(_this);
-        _this.state = {};
-        return _this;
+      _this.fbAsyncInit = _this.fbAsyncInit.bind(_this);
+      _this.initFB = _this.initFB.bind(_this);
+      _this.signIn = _this.signIn.bind(_this);
+      _this.signOut = _this.signOut.bind(_this);
+      _this.federatedSignIn = _this.federatedSignIn.bind(_this);
+      _this.state = {};
+      return _this;
+    }
+
+    class_1.prototype.signIn = function () {
+      var _this = this;
+
+      var fb = window.FB;
+      fb.getLoginStatus(function (response) {
+        var payload = {
+          provider: constants_1.Constants.FACEBOOK
+        };
+
+        try {
+          localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
+        } catch (e) {
+          logger.debug('Failed to cache auth source into localStorage', e);
+        }
+
+        if (response.status === 'connected') {
+          _this.federatedSignIn(response.authResponse);
+        } else {
+          fb.login(function (response) {
+            if (!response || !response.authResponse) {
+              return;
+            }
+
+            _this.federatedSignIn(response.authResponse);
+          }, {
+            scope: 'public_profile,email'
+          });
+        }
+      });
+    };
+
+    class_1.prototype.federatedSignIn = function (response) {
+      logger.debug(response);
+      var onStateChange = this.props.onStateChange;
+      var accessToken = response.accessToken,
+          expiresIn = response.expiresIn;
+      var date = new Date();
+      var expires_at = expiresIn * 1000 + date.getTime();
+
+      if (!accessToken) {
+        return;
       }
 
-      class_1.prototype.signIn = function () {
-        var _this = this;
+      var fb = window.FB;
+      fb.api('/me', {
+        fields: 'name,email,picture'
+      }, function (response) {
+        var user = {
+          name: response.name,
+          email: response.email,
+          picture: response.picture.data.url
+        };
 
-        var fb = window.FB;
-        fb.getLoginStatus(function (response) {
-          var payload = {
-            provider: constants_1.Constants.FACEBOOK
-          };
-
-          try {
-            localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
-          } catch (e) {
-            logger.debug('Failed to cache auth source into localStorage', e);
-          }
-
-          if (response.status === 'connected') {
-            _this.federatedSignIn(response.authResponse);
-          } else {
-            fb.login(function (response) {
-              if (!response || !response.authResponse) {
-                return;
-              }
-
-              _this.federatedSignIn(response.authResponse);
-            }, {
-              scope: 'public_profile,email'
-            });
-          }
-        });
-      };
-
-      class_1.prototype.federatedSignIn = function (response) {
-        logger.debug(response);
-        var onStateChange = this.props.onStateChange;
-        var accessToken = response.accessToken,
-            expiresIn = response.expiresIn;
-        var date = new Date();
-        var expires_at = expiresIn * 1000 + date.getTime();
-
-        if (!accessToken) {
-          return;
+        if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
+          throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
         }
 
-        var fb = window.FB;
-        fb.api('/me', {
-          fields: 'name,email,picture'
-        }, function (response) {
-          var user = {
-            name: response.name,
-            email: response.email,
-            picture: response.picture.data.url
-          };
-
-          if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
-            throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
+        auth_1.Auth.federatedSignIn('facebook', {
+          token: accessToken,
+          expires_at: expires_at
+        }, user).then(function (credentials) {
+          return auth_1.Auth.currentAuthenticatedUser();
+        }).then(function (authUser) {
+          if (onStateChange) {
+            onStateChange('signedIn', authUser);
           }
-
-          auth_1.Auth.federatedSignIn('facebook', {
-            token: accessToken,
-            expires_at: expires_at
-          }, user).then(function (credentials) {
-            return auth_1.Auth.currentAuthenticatedUser();
-          }).then(function (authUser) {
-            if (onStateChange) {
-              onStateChange('signedIn', authUser);
-            }
-          });
         });
-      };
+      });
+    };
 
-      class_1.prototype.signOut = function () {
-        var fb = window.FB;
+    class_1.prototype.signOut = function () {
+      var fb = window.FB;
 
-        if (!fb) {
-          logger.debug('FB sdk undefined');
+      if (!fb) {
+        logger.debug('FB sdk undefined');
+        return Promise.resolve();
+      }
+
+      fb.getLoginStatus(function (response) {
+        if (response.status === 'connected') {
+          return new Promise(function (res, rej) {
+            logger.debug('facebook signing out');
+            fb.logout(function (response) {
+              res(response);
+            });
+          });
+        } else {
           return Promise.resolve();
         }
+      });
+    };
 
-        fb.getLoginStatus(function (response) {
-          if (response.status === 'connected') {
-            return new Promise(function (res, rej) {
-              logger.debug('facebook signing out');
-              fb.logout(function (response) {
-                res(response);
-              });
-            });
-          } else {
-            return Promise.resolve();
-          }
-        });
-      };
+    class_1.prototype.componentDidMount = function () {
+      var facebook_app_id = this.props.facebook_app_id;
+      if (facebook_app_id && !window.FB) this.createScript();
+    };
 
-      class_1.prototype.componentDidMount = function () {
-        var facebook_app_id = this.props.facebook_app_id;
-        if (facebook_app_id && !window.FB) this.createScript();
-      };
+    class_1.prototype.fbAsyncInit = function () {
+      logger.debug('init FB');
+      var facebook_app_id = this.props.facebook_app_id;
+      var fb = window.FB;
+      fb.init({
+        appId: facebook_app_id,
+        cookie: true,
+        xfbml: true,
+        version: 'v2.11'
+      });
+      fb.getLoginStatus(function (response) {
+        return logger.debug(response);
+      });
+    };
 
-      class_1.prototype.fbAsyncInit = function () {
-        logger.debug('init FB');
-        var facebook_app_id = this.props.facebook_app_id;
-        var fb = window.FB;
-        fb.init({
-          appId: facebook_app_id,
-          cookie: true,
-          xfbml: true,
-          version: 'v2.11'
-        });
-        fb.getLoginStatus(function (response) {
-          return logger.debug(response);
-        });
-      };
+    class_1.prototype.initFB = function () {
+      var fb = window.FB;
+      logger.debug('FB inited');
+    };
 
-      class_1.prototype.initFB = function () {
-        var fb = window.FB;
-        logger.debug('FB inited');
-      };
+    class_1.prototype.createScript = function () {
+      window.fbAsyncInit = this.fbAsyncInit;
+      var script = document.createElement('script');
+      script.src = 'https://connect.facebook.net/en_US/sdk.js';
+      script.async = true;
+      script.onload = this.initFB;
+      document.body.appendChild(script);
+    };
 
-      class_1.prototype.createScript = function () {
-        window.fbAsyncInit = this.fbAsyncInit;
-        var script = document.createElement('script');
-        script.src = 'https://connect.facebook.net/en_US/sdk.js';
-        script.async = true;
-        script.onload = this.initFB;
-        document.body.appendChild(script);
-      };
+    class_1.prototype.render = function () {
+      var fb = window.FB;
+      return React.createElement(Comp, __assign({}, this.props, {
+        fb: fb,
+        facebookSignIn: this.signIn,
+        facebookSignOut: this.signOut
+      }));
+    };
 
-      class_1.prototype.render = function () {
-        var fb = window.FB;
-        return React.createElement(Comp, __assign({}, this.props, {
-          fb: fb,
-          facebookSignIn: this.signIn,
-          facebookSignOut: this.signOut
-        }));
-      };
-
-      return class_1;
-    }(React.Component)
-  );
+    return class_1;
+  }(React.Component);
 }
 
 exports.withFacebook = withFacebook;
@@ -9102,150 +9062,147 @@ var constants_1 = __webpack_require__(/*! ../common/constants */ "./lib/Auth/com
 var logger = new core_1.ConsoleLogger('withGoogle');
 
 function withGoogle(Comp) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.initGapi = _this.initGapi.bind(_this);
-        _this.signIn = _this.signIn.bind(_this);
-        _this.signOut = _this.signOut.bind(_this);
-        _this.federatedSignIn = _this.federatedSignIn.bind(_this);
-        _this.state = {};
-        return _this;
+      _this.initGapi = _this.initGapi.bind(_this);
+      _this.signIn = _this.signIn.bind(_this);
+      _this.signOut = _this.signOut.bind(_this);
+      _this.federatedSignIn = _this.federatedSignIn.bind(_this);
+      _this.state = {};
+      return _this;
+    }
+
+    class_1.prototype.signIn = function () {
+      var _this = this;
+
+      var ga = window.gapi.auth2.getAuthInstance();
+      var onError = this.props.onError;
+      ga.signIn().then(function (googleUser) {
+        _this.federatedSignIn(googleUser);
+
+        var payload = {
+          provider: constants_1.Constants.GOOGLE
+        };
+
+        try {
+          localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
+        } catch (e) {
+          logger.debug('Failed to cache auth source into localStorage', e);
+        }
+      }, function (error) {
+        if (onError) onError(error);else throw error;
+      });
+    };
+
+    class_1.prototype.federatedSignIn = function (googleUser) {
+      return __awaiter(this, void 0, void 0, function () {
+        var _a, id_token, expires_at, profile, user, onStateChange;
+
+        return __generator(this, function (_b) {
+          switch (_b.label) {
+            case 0:
+              _a = googleUser.getAuthResponse(), id_token = _a.id_token, expires_at = _a.expires_at;
+              profile = googleUser.getBasicProfile();
+              user = {
+                email: profile.getEmail(),
+                name: profile.getName(),
+                picture: profile.getImageUrl()
+              };
+              onStateChange = this.props.onStateChange;
+
+              if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
+                throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
+              }
+
+              return [4
+              /*yield*/
+              , auth_1.Auth.federatedSignIn('google', {
+                token: id_token,
+                expires_at: expires_at
+              }, user)];
+
+            case 1:
+              _b.sent();
+
+              return [4
+              /*yield*/
+              , auth_1.Auth.currentAuthenticatedUser()];
+
+            case 2:
+              user = _b.sent();
+
+              if (onStateChange) {
+                onStateChange('signedIn', user);
+              }
+
+              return [2
+              /*return*/
+              ];
+          }
+        });
+      });
+    };
+
+    class_1.prototype.signOut = function () {
+      var authInstance = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
+
+      if (!authInstance) {
+        return Promise.resolve();
       }
 
-      class_1.prototype.signIn = function () {
-        var _this = this;
-
-        var ga = window.gapi.auth2.getAuthInstance();
-        var onError = this.props.onError;
-        ga.signIn().then(function (googleUser) {
-          _this.federatedSignIn(googleUser);
-
-          var payload = {
-            provider: constants_1.Constants.GOOGLE
-          };
-
-          try {
-            localStorage.setItem(constants_1.Constants.AUTH_SOURCE_KEY, JSON.stringify(payload));
-          } catch (e) {
-            logger.debug('Failed to cache auth source into localStorage', e);
-          }
-        }, function (error) {
-          if (onError) onError(error);else throw error;
-        });
-      };
-
-      class_1.prototype.federatedSignIn = function (googleUser) {
-        return __awaiter(this, void 0, void 0, function () {
-          var _a, id_token, expires_at, profile, user, onStateChange;
-
-          return __generator(this, function (_b) {
-            switch (_b.label) {
-              case 0:
-                _a = googleUser.getAuthResponse(), id_token = _a.id_token, expires_at = _a.expires_at;
-                profile = googleUser.getBasicProfile();
-                user = {
-                  email: profile.getEmail(),
-                  name: profile.getName(),
-                  picture: profile.getImageUrl()
-                };
-                onStateChange = this.props.onStateChange;
-
-                if (!auth_1.Auth || typeof auth_1.Auth.federatedSignIn !== 'function' || typeof auth_1.Auth.currentAuthenticatedUser !== 'function') {
-                  throw new Error('No Auth module found, please ensure @aws-amplify/auth is imported');
-                }
-
-                return [4
-                /*yield*/
-                , auth_1.Auth.federatedSignIn('google', {
-                  token: id_token,
-                  expires_at: expires_at
-                }, user)];
-
-              case 1:
-                _b.sent();
-
-                return [4
-                /*yield*/
-                , auth_1.Auth.currentAuthenticatedUser()];
-
-              case 2:
-                user = _b.sent();
-
-                if (onStateChange) {
-                  onStateChange('signedIn', user);
-                }
-
-                return [2
-                /*return*/
-                ];
-            }
-          });
-        });
-      };
-
-      class_1.prototype.signOut = function () {
-        var authInstance = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
-
-        if (!authInstance) {
+      authInstance.then(function (googleAuth) {
+        if (!googleAuth) {
+          logger.debug('google Auth undefined');
           return Promise.resolve();
         }
 
-        authInstance.then(function (googleAuth) {
-          if (!googleAuth) {
-            logger.debug('google Auth undefined');
-            return Promise.resolve();
-          }
+        logger.debug('google signing out');
+        return googleAuth.signOut();
+      });
+    };
 
-          logger.debug('google signing out');
-          return googleAuth.signOut();
+    class_1.prototype.componentDidMount = function () {
+      var google_client_id = this.props.google_client_id;
+      var ga = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
+      if (google_client_id && !ga) this.createScript();
+    };
+
+    class_1.prototype.createScript = function () {
+      var script = document.createElement('script');
+      script.src = 'https://apis.google.com/js/platform.js';
+      script.async = true;
+      script.onload = this.initGapi;
+      document.body.appendChild(script);
+    };
+
+    class_1.prototype.initGapi = function () {
+      logger.debug('init gapi');
+      var that = this;
+      var google_client_id = this.props.google_client_id;
+      var g = window.gapi;
+      g.load('auth2', function () {
+        g.auth2.init({
+          client_id: google_client_id,
+          scope: 'profile email openid'
         });
-      };
+      });
+    };
 
-      class_1.prototype.componentDidMount = function () {
-        var google_client_id = this.props.google_client_id;
-        var ga = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
-        if (google_client_id && !ga) this.createScript();
-      };
+    class_1.prototype.render = function () {
+      var ga = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
+      return React.createElement(Comp, __assign({}, this.props, {
+        ga: ga,
+        googleSignIn: this.signIn,
+        googleSignOut: this.signOut
+      }));
+    };
 
-      class_1.prototype.createScript = function () {
-        var script = document.createElement('script');
-        script.src = 'https://apis.google.com/js/platform.js';
-        script.async = true;
-        script.onload = this.initGapi;
-        document.body.appendChild(script);
-      };
-
-      class_1.prototype.initGapi = function () {
-        logger.debug('init gapi');
-        var that = this;
-        var google_client_id = this.props.google_client_id;
-        var g = window.gapi;
-        g.load('auth2', function () {
-          g.auth2.init({
-            client_id: google_client_id,
-            scope: 'profile email openid'
-          });
-        });
-      };
-
-      class_1.prototype.render = function () {
-        var ga = window.gapi && window.gapi.auth2 ? window.gapi.auth2.getAuthInstance() : null;
-        return React.createElement(Comp, __assign({}, this.props, {
-          ga: ga,
-          googleSignIn: this.signIn,
-          googleSignOut: this.signOut
-        }));
-      };
-
-      return class_1;
-    }(React.Component)
-  );
+    return class_1;
+  }(React.Component);
 }
 
 exports.withGoogle = withGoogle;
@@ -9385,33 +9342,30 @@ var ui_1 = __webpack_require__(/*! @aws-amplify/ui */ "@aws-amplify/ui");
 var Amplify_UI_Components_React_1 = __webpack_require__(/*! ../../Amplify-UI/Amplify-UI-Components-React */ "./lib/Amplify-UI/Amplify-UI-Components-React.js");
 
 function withOAuth(Comp) {
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.signIn = _this.signIn.bind(_this);
-        return _this;
-      }
+      _this.signIn = _this.signIn.bind(_this);
+      return _this;
+    }
 
-      class_1.prototype.signIn = function (_e, provider) {
-        auth_1.Auth.federatedSignIn({
-          provider: provider
-        });
-      };
+    class_1.prototype.signIn = function (_e, provider) {
+      auth_1.Auth.federatedSignIn({
+        provider: provider
+      });
+    };
 
-      class_1.prototype.render = function () {
-        return React.createElement(Comp, __assign({}, this.props, {
-          OAuthSignIn: this.signIn
-        }));
-      };
+    class_1.prototype.render = function () {
+      return React.createElement(Comp, __assign({}, this.props, {
+        OAuthSignIn: this.signIn
+      }));
+    };
 
-      return class_1;
-    }(React.Component)
-  );
+    return class_1;
+  }(React.Component);
 }
 
 exports.withOAuth = withOAuth;
@@ -9514,9 +9468,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('RequireNewPassword');
 
-var RequireNewPassword =
-/** @class */
-function (_super) {
+var RequireNewPassword = function (_super) {
   __extends(RequireNewPassword, _super);
 
   function RequireNewPassword(props) {
@@ -9893,9 +9845,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('SignIn');
 
-var SignIn =
-/** @class */
-function (_super) {
+var SignIn = function (_super) {
   __extends(SignIn, _super);
 
   function SignIn(props) {
@@ -10196,9 +10146,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('SignOut');
 
-var SignOut =
-/** @class */
-function (_super) {
+var SignOut = function (_super) {
   __extends(SignOut, _super);
 
   function SignOut(props) {
@@ -10582,9 +10530,7 @@ var PhoneField_1 = __webpack_require__(/*! ./PhoneField */ "./lib/Auth/PhoneFiel
 
 var logger = new core_1.ConsoleLogger('SignUp');
 
-var SignUp =
-/** @class */
-function (_super) {
+var SignUp = function (_super) {
   __extends(SignUp, _super);
 
   function SignUp(props) {
@@ -11001,9 +10947,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('TOTPSetup');
 
-var TOTPSetup =
-/** @class */
-function (_super) {
+var TOTPSetup = function (_super) {
   __extends(TOTPSetup, _super);
 
   function TOTPSetup(props) {
@@ -11152,9 +11096,7 @@ var data_test_attributes_1 = __webpack_require__(/*! ../Amplify-UI/data-test-att
 
 var logger = new core_1.ConsoleLogger('VerifyContact');
 
-var VerifyContact =
-/** @class */
-function (_super) {
+var VerifyContact = function (_super) {
   __extends(VerifyContact, _super);
 
   function VerifyContact(props) {
@@ -11656,65 +11598,48 @@ function withAuthenticator(Comp, includeGreetings, authenticatorComponents, fede
     signUpConfig = {};
   }
 
-  return (
-    /** @class */
-    function (_super) {
-      __extends(class_1, _super);
+  return function (_super) {
+    __extends(class_1, _super);
 
-      function class_1(props) {
-        var _this = _super.call(this, props) || this;
+    function class_1(props) {
+      var _this = _super.call(this, props) || this;
 
-        _this.handleAuthStateChange = _this.handleAuthStateChange.bind(_this);
-        _this.state = {
-          authState: props.authState || null,
-          authData: props.authData || null
+      _this.handleAuthStateChange = _this.handleAuthStateChange.bind(_this);
+      _this.state = {
+        authState: props.authState || null,
+        authData: props.authData || null
+      };
+      _this.authConfig = {};
+
+      if (_typeof(includeGreetings) === 'object' && includeGreetings !== null) {
+        _this.authConfig = Object.assign(_this.authConfig, includeGreetings);
+      } else {
+        _this.authConfig = {
+          includeGreetings: includeGreetings,
+          authenticatorComponents: authenticatorComponents,
+          federated: federated,
+          theme: theme,
+          signUpConfig: signUpConfig
         };
-        _this.authConfig = {};
-
-        if (_typeof(includeGreetings) === 'object' && includeGreetings !== null) {
-          _this.authConfig = Object.assign(_this.authConfig, includeGreetings);
-        } else {
-          _this.authConfig = {
-            includeGreetings: includeGreetings,
-            authenticatorComponents: authenticatorComponents,
-            federated: federated,
-            theme: theme,
-            signUpConfig: signUpConfig
-          };
-        }
-
-        return _this;
       }
 
-      class_1.prototype.handleAuthStateChange = function (state, data) {
-        this.setState({
-          authState: state,
-          authData: data
-        });
-      };
+      return _this;
+    }
 
-      class_1.prototype.render = function () {
-        var _a = this.state,
-            authState = _a.authState,
-            authData = _a.authData;
+    class_1.prototype.handleAuthStateChange = function (state, data) {
+      this.setState({
+        authState: state,
+        authData: data
+      });
+    };
 
-        if (authState === 'signedIn') {
-          return React.createElement(React.Fragment, null, this.authConfig.includeGreetings ? React.createElement(Authenticator_1.Authenticator, __assign({}, this.props, {
-            theme: this.authConfig.theme,
-            federated: this.authConfig.federated || this.props.federated,
-            hideDefault: this.authConfig.authenticatorComponents && this.authConfig.authenticatorComponents.length > 0,
-            signUpConfig: this.authConfig.signUpConfig,
-            usernameAttributes: this.authConfig.usernameAttributes,
-            onStateChange: this.handleAuthStateChange,
-            children: this.authConfig.authenticatorComponents || []
-          })) : null, React.createElement(Comp, __assign({}, this.props, {
-            authState: authState,
-            authData: authData,
-            onStateChange: this.handleAuthStateChange
-          })));
-        }
+    class_1.prototype.render = function () {
+      var _a = this.state,
+          authState = _a.authState,
+          authData = _a.authData;
 
-        return React.createElement(Authenticator_1.Authenticator, __assign({}, this.props, {
+      if (authState === 'signedIn') {
+        return React.createElement(React.Fragment, null, this.authConfig.includeGreetings ? React.createElement(Authenticator_1.Authenticator, __assign({}, this.props, {
           theme: this.authConfig.theme,
           federated: this.authConfig.federated || this.props.federated,
           hideDefault: this.authConfig.authenticatorComponents && this.authConfig.authenticatorComponents.length > 0,
@@ -11722,19 +11647,31 @@ function withAuthenticator(Comp, includeGreetings, authenticatorComponents, fede
           usernameAttributes: this.authConfig.usernameAttributes,
           onStateChange: this.handleAuthStateChange,
           children: this.authConfig.authenticatorComponents || []
-        }));
-      };
+        })) : null, React.createElement(Comp, __assign({}, this.props, {
+          authState: authState,
+          authData: authData,
+          onStateChange: this.handleAuthStateChange
+        })));
+      }
 
-      return class_1;
-    }(React.Component)
-  );
+      return React.createElement(Authenticator_1.Authenticator, __assign({}, this.props, {
+        theme: this.authConfig.theme,
+        federated: this.authConfig.federated || this.props.federated,
+        hideDefault: this.authConfig.authenticatorComponents && this.authConfig.authenticatorComponents.length > 0,
+        signUpConfig: this.authConfig.signUpConfig,
+        usernameAttributes: this.authConfig.usernameAttributes,
+        onStateChange: this.handleAuthStateChange,
+        children: this.authConfig.authenticatorComponents || []
+      }));
+    };
+
+    return class_1;
+  }(React.Component);
 }
 
 exports.withAuthenticator = withAuthenticator;
 
-var AuthenticatorWrapper =
-/** @class */
-function (_super) {
+var AuthenticatorWrapper = function (_super) {
   __extends(AuthenticatorWrapper, _super);
 
   function AuthenticatorWrapper(props) {
@@ -12074,9 +12011,7 @@ var defaultVoiceConfig = {
 };
 var audioControl;
 
-var ChatBot =
-/** @class */
-function (_super) {
+var ChatBot = function (_super) {
   __extends(ChatBot, _super);
 
   function ChatBot(props) {
@@ -13733,9 +13668,7 @@ var S3Text_1 = __webpack_require__(/*! ./S3Text */ "./lib/Storage/S3Text.js");
 
 var logger = new core_1.ConsoleLogger('Storage.S3Album');
 
-var S3Album =
-/** @class */
-function (_super) {
+var S3Album = function (_super) {
   __extends(S3Album, _super);
 
   function S3Album(props) {
@@ -14145,9 +14078,7 @@ var Common_1 = __webpack_require__(/*! ./Common */ "./lib/Storage/Common.js");
 
 var logger = new core_1.ConsoleLogger('Storage.S3Image');
 
-var S3Image =
-/** @class */
-function (_super) {
+var S3Image = function (_super) {
   __extends(S3Image, _super);
 
   function S3Image(props) {
@@ -14453,9 +14384,7 @@ var Common_1 = __webpack_require__(/*! ./Common */ "./lib/Storage/Common.js");
 
 var logger = new core_1.ConsoleLogger('Storage.S3Text');
 
-var S3Text =
-/** @class */
-function (_super) {
+var S3Text = function (_super) {
   __extends(S3Text, _super);
 
   function S3Text(props) {
@@ -14806,9 +14735,7 @@ var PickerPreview = {
 };
 var logger = new core_1.ConsoleLogger('PhotoPicker');
 
-var PhotoPicker =
-/** @class */
-function (_super) {
+var PhotoPicker = function (_super) {
   __extends(PhotoPicker, _super);
 
   function PhotoPicker(props) {
@@ -14984,9 +14911,7 @@ var PickerInput = {
 };
 var logger = new core_1.ConsoleLogger('Picker');
 
-var Picker =
-/** @class */
-function (_super) {
+var Picker = function (_super) {
   __extends(Picker, _super);
 
   function Picker() {
@@ -15152,9 +15077,7 @@ var TOTPSetupComp_1 = __webpack_require__(/*! ./TOTPSetupComp */ "./lib/Widget/T
 
 var logger = new core_1.ConsoleLogger('SelectMFAType');
 
-var SelectMFAType =
-/** @class */
-function (_super) {
+var SelectMFAType = function (_super) {
   __extends(SelectMFAType, _super);
 
   function SelectMFAType(props) {
@@ -15399,9 +15322,7 @@ var qrcode_react_1 = __importDefault(__webpack_require__(/*! qrcode.react */ "..
 
 var logger = new core_1.ConsoleLogger('TOTPSetupComp');
 
-var TOTPSetupComp =
-/** @class */
-function (_super) {
+var TOTPSetupComp = function (_super) {
   __extends(TOTPSetupComp, _super);
 
   function TOTPSetupComp(props) {
@@ -15641,9 +15562,7 @@ var PickerPreview = {
 };
 var logger = new core_1.ConsoleLogger('TextPicker');
 
-var TextPicker =
-/** @class */
-function (_super) {
+var TextPicker = function (_super) {
   __extends(TextPicker, _super);
 
   function TextPicker(props) {
@@ -16261,9 +16180,7 @@ var SCENE_CONTAINER_DOM_ID = 'scene-container-dom-id';
 var SCENE_DOM_ID = 'scene-dom-id';
 var logger = new core_1.ConsoleLogger('SumerianScene');
 
-var SumerianScene =
-/** @class */
-function (_super) {
+var SumerianScene = function (_super) {
   __extends(SumerianScene, _super);
 
   function SumerianScene(props) {

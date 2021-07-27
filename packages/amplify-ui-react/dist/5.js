@@ -19,9 +19,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
-/* harmony import */ var _auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-e49f583d.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
+/* harmony import */ var _auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-c42c7a9e.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js");
 /* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! buffer */ "../../node_modules/buffer/index.js");
 /* harmony import */ var buffer__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(buffer__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! fs */ "../../node_modules/node-libs-browser/mock/empty.js");
@@ -209,9 +209,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 var amplifyRadioButtonCss = ":host{--font-family:var(--amplify-font-family)}.radio-button{display:block;width:100%;padding:16px;font-size:var(--amplify-text-sm);font-family:var(--font-family)}.radio-button input{margin-right:12px}";
 
-var AmplifyRadioButton =
-/** @class */
-function () {
+var AmplifyRadioButton = function () {
   function AmplifyRadioButton(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** (Optional) The placeholder for the input element.  Using hints is recommended, but placeholders can also be useful to convey information to users. */
@@ -248,9 +246,7 @@ function () {
 AmplifyRadioButton.style = amplifyRadioButtonCss;
 var amplifyToastCss = ":host{--background-color:var(--amplify-secondary-tint);--color:var(--amplify-white);--font-size:var(--amplify-text-sm);--font-family:var(--amplify-font-family);--close-icon-color:var(--amplify-white);--close-icon-hover:var(--amplify-red)}.toast-icon{padding-right:5px}.toast{display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between;position:absolute;top:0;left:0;width:100%;z-index:99;-webkit-box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.3);box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.3);padding:16px;background-color:var(--background-color);font-size:var(--font-size);color:var(--color);-webkit-box-sizing:border-box;box-sizing:border-box;border-radius:5px;font-family:var(--font-family)}.toast>span{margin-right:10px}.toast-close{margin-left:auto;-ms-flex-item-align:center;align-self:center;position:relative;width:18px;height:18px;overflow:hidden;cursor:pointer;background:transparent;border:none}.toast-close::before,.toast-close::after{content:\"\";position:absolute;height:2px;width:100%;top:50%;left:0;margin-top:-1px;background:var(--close-icon-color)}.toast-close:hover::before,.toast-close:hover::after{background:var(--close-icon-hover)}.toast-close::before{-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}.toast-close::after{-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}";
 
-var AmplifyToast =
-/** @class */
-function () {
+var AmplifyToast = function () {
   function AmplifyToast(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Message to be displayed inside the toast*/
@@ -1496,9 +1492,7 @@ var alignmentPattern = createCommonjsModule(function (module, exports) {
     for (var i = 0; i < posLength; i++) {
       for (var j = 0; j < posLength; j++) {
         // Skip if position is occupied by finder patterns
-        if (i === 0 && j === 0 || // top-left
-        i === 0 && j === posLength - 1 || // bottom-left
-        i === posLength - 1 && j === 0) {
+        if (i === 0 && j === 0 || i === 0 && j === posLength - 1 || i === posLength - 1 && j === 0) {
           // top-right
           continue;
         }
@@ -4052,9 +4046,7 @@ var alignmentPattern$1 = createCommonjsModule(function (module, exports) {
     for (var i = 0; i < posLength; i++) {
       for (var j = 0; j < posLength; j++) {
         // Skip if position is occupied by finder patterns
-        if (i === 0 && j === 0 || // top-left
-        i === 0 && j === posLength - 1 || // bottom-left
-        i === posLength - 1 && j === 0) {
+        if (i === 0 && j === 0 || i === 0 && j === posLength - 1 || i === posLength - 1 && j === 0) {
           // top-right
           continue;
         }
@@ -5937,9 +5929,7 @@ var parser = createCommonjsModule(function (module) {
     this.read(length + 4, this._skipChunk.bind(this));
   };
 
-  Parser.prototype._skipChunk = function ()
-  /*data*/
-  {
+  Parser.prototype._skipChunk = function () {
     this.read(8, this._parseChunkBegin.bind(this));
   };
 
@@ -6244,9 +6234,7 @@ var parser$1 = createCommonjsModule(function (module) {
     this.read(length + 4, this._skipChunk.bind(this));
   };
 
-  Parser.prototype._skipChunk = function ()
-  /*data*/
-  {
+  Parser.prototype._skipChunk = function () {
     this.read(8, this._parseChunkBegin.bind(this));
   };
 
@@ -10037,9 +10025,7 @@ var lib = server;
 var amplifyTotpSetupCss = ".totp-setup{text-align:center;margin-bottom:30px}.totp-setup img{height:128px;width:128px}";
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('TOTP');
 
-var AmplifyTOTPSetup =
-/** @class */
-function () {
+var AmplifyTOTPSetup = function () {
   function class_1(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     this.inputProps = {
@@ -10047,13 +10033,19 @@ function () {
     };
     /** Auth state change handler for this component */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Used for header text in totp setup component */
 
     this.headerText = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].TOTP_HEADER_TEXT;
     /** Used for customizing the issuer string in the qr code image */
 
     this.issuer = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].TOTP_ISSUER;
+    /** This is run after totp setup is complete. Useful if using this as standalone. */
+
+    this.handleComplete = this.onTOTPEvent;
+    /** Set this to true if this component is running outside the default `amplify-authenticator` usage */
+
+    this.standalone = false;
     this.code = null;
     this.setupMessage = null;
     this.qrCodeInput = null;
@@ -10068,13 +10060,19 @@ function () {
         switch (_a.label) {
           case 0:
             /**
-             * We didn't use `@Watch` here because it doesn't fire when we go from require-new-password to totp-setup.
-             * That is because `Auth.completeNewPassword` only changes `user` in place and Watch doesn't detect changes
-             * unless we make a clone.
+             * If this component is being used internally by the authenticator, we want to re-run
+             * setup only when the current auth state is `AuthState.TOTPSetup`.
+             *
+             * Ideally, we would only run the setup once when the component is mounted. This is not possible
+             * due to a bug with slots -- a slotted component will run its `componentWillLoad` lifecycle before
+             * it is even rendered. So instead we watch for authstate changes and run setup conditionally.
              */
-            this.removeHubListener = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["o"])(function (authState) {
-              if (authState === _auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["A"].TOTPSetup) _this.setup();
-            });
+            if (!this.standalone) {
+              this.removeHubListener = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["o"])(function (authState) {
+                if (authState === _auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["A"].TOTPSetup) _this.setup();
+              });
+            }
+
             return [4
             /*yield*/
             , this.setup()];
@@ -10089,6 +10087,14 @@ function () {
       });
     });
   };
+  /**
+   * If this component is being used externally, we can use `@Watch` as normal.
+   */
+
+
+  class_1.prototype.handleUserChange = function () {
+    this.standalone && this.setup();
+  };
 
   class_1.prototype.disconnectedCallback = function () {
     this.removeHubListener && this.removeHubListener(); // stop listening to `onAuthUIStateChange`
@@ -10098,25 +10104,19 @@ function () {
     return "otpauth://totp/" + issuer + ":" + user.username + "?secret=" + secretKey + "&issuer=" + issuer;
   };
 
-  class_1.prototype.onTOTPEvent = function (event, data, user) {
+  class_1.prototype.onTOTPEvent = function (user) {
     return __awaiter(this, void 0, void 0, function () {
       return __generator(this, function (_a) {
         switch (_a.label) {
           case 0:
-            logger.debug('on totp event', event, data);
-            if (!(event === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["S"] && data === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["i"])) return [3
-            /*break*/
-            , 2];
+            logger.debug('on totp event');
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["c"])(user, this.handleAuthStateChange)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["c"])(user, this.handleAuthStateChange)];
 
           case 1:
             _a.sent();
 
-            _a.label = 2;
-
-          case 2:
             return [2
             /*return*/
             ];
@@ -10152,7 +10152,7 @@ function () {
 
           case 2:
             error_1 = _b.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
             return [3
             /*break*/
             , 3];
@@ -10173,16 +10173,26 @@ function () {
         switch (_a.label) {
           case 0:
             // ensure setup is only run once after totp setup is available
-            if (!this.user || this.user.challengeName !== 'MFA_SETUP' || this.loading) return [2
-            /*return*/
-            ];
-            this.setupMessage = null;
-            encodedIssuer = encodeURI(_aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(this.issuer));
-
-            if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].setupTOTP !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+            if (this.code || this.loading) {
+              logger.debug('setup was attempted while another is in progress, skipping setup.');
+              return [2
+              /*return*/
+              ];
             }
 
+            if (!this.user || !this.user.associateSoftwareToken) {
+              logger.debug('setup was attempted with invalid `user`, skipping setup.', this.user);
+              return [2
+              /*return*/
+              ];
+            }
+
+            if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].setupTOTP !== 'function') {
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+            }
+
+            this.setupMessage = null;
+            encodedIssuer = encodeURI(_aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(this.issuer));
             this.loading = true;
             _a.label = 1;
 
@@ -10204,7 +10214,7 @@ function () {
 
           case 3:
             error_2 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_2);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_2);
             logger.debug(_aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].TOTP_SETUP_FAILURE), error_2);
             return [3
             /*break*/
@@ -10245,7 +10255,7 @@ function () {
             user = this.user;
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].verifyTotpToken !== 'function' || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].setPreferredMFA !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             _a.label = 1;
@@ -10271,7 +10281,7 @@ function () {
             logger.debug(_aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].TOTP_SUCCESS_MESSAGE));
             return [4
             /*yield*/
-            , this.onTOTPEvent(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["S"], _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["i"], user)];
+            , this.handleComplete(user)];
 
           case 4:
             _a.sent();
@@ -10323,6 +10333,15 @@ function () {
     }))));
   };
 
+  Object.defineProperty(class_1, "watchers", {
+    get: function get() {
+      return {
+        "user": ["handleUserChange"]
+      };
+    },
+    enumerable: false,
+    configurable: true
+  });
   return class_1;
 }();
 
@@ -10332,9 +10351,9 @@ AmplifyTOTPSetup.style = amplifyTotpSetupCss;
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js":
+/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js":
 /*!**********************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js ***!
   \**********************************************************************/
 /*! exports provided: c, h */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -10349,8 +10368,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -10509,7 +10528,7 @@ function checkContact(user, handleAuthStateChange) {
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].verifiedContact !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           } // If `user` is a federated user, we shouldn't call `verifiedContact`
           // since `user` isn't `CognitoUser`
 
@@ -10546,7 +10565,7 @@ function checkContact(user, handleAuthStateChange) {
 
         case 3:
           error_1 = _a.sent();
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
           return [3
           /*break*/
           , 4];
@@ -10567,7 +10586,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].signIn !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           }
 
           _a.label = 1;
@@ -10662,7 +10681,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
             }
           }
 
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
           return [3
           /*break*/
           , 10];

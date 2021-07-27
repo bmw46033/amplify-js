@@ -17,10 +17,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 /* harmony import */ var _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @aws-amplify/storage */ "@aws-amplify/storage");
 /* harmony import */ var _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_storage__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _storage_helpers_f0dfa800_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./storage-helpers-f0dfa800.js */ "../amplify-ui-components/dist/esm-es5/storage-helpers-f0dfa800.js");
+/* harmony import */ var _storage_helpers_1ee72431_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./storage-helpers-1ee72431.js */ "../amplify-ui-components/dist/esm-es5/storage-helpers-1ee72431.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -174,9 +174,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('S3TextPicker');
 
-var AmplifyS3TextPicker =
-/** @class */
-function () {
+var AmplifyS3TextPicker = function () {
   function class_1(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** The content type header used when uploading to S3 */
@@ -199,7 +197,7 @@ function () {
           case 0:
             file = event.target.files[0];
             _a = this, _b = _a.path, path = _b === void 0 ? '' : _b, level = _a.level, fileToKey = _a.fileToKey, track = _a.track;
-            key = path + Object(_storage_helpers_f0dfa800_js__WEBPACK_IMPORTED_MODULE_7__["c"])(file, fileToKey);
+            key = path + Object(_storage_helpers_1ee72431_js__WEBPACK_IMPORTED_MODULE_7__["c"])(file, fileToKey);
 
             if (!file) {
               throw new Error('No file was selected');
@@ -212,7 +210,7 @@ function () {
 
             return [4
             /*yield*/
-            , Object(_storage_helpers_f0dfa800_js__WEBPACK_IMPORTED_MODULE_7__["p"])(key, file, level, track, file['type'], logger)];
+            , Object(_storage_helpers_1ee72431_js__WEBPACK_IMPORTED_MODULE_7__["p"])(key, file, level, track, file['type'], logger)];
 
           case 2:
             _c.sent();
@@ -262,9 +260,9 @@ function () {
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/storage-helpers-f0dfa800.js":
+/***/ "../amplify-ui-components/dist/esm-es5/storage-helpers-1ee72431.js":
 /*!*************************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/storage-helpers-f0dfa800.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/storage-helpers-1ee72431.js ***!
   \*************************************************************************/
 /*! exports provided: a, c, g, i, p */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -276,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return getStorageObject; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return imageFileType; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return putStorageObject; });
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
 /* harmony import */ var _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @aws-amplify/storage */ "@aws-amplify/storage");
 /* harmony import */ var _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__);
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
@@ -460,7 +458,7 @@ var getStorageObject = function getStorageObject(key, level, track, identityId, 
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"] || typeof _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"].get !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
           }
 
           _a.label = 1;
@@ -520,7 +518,7 @@ var getTextSource = function getTextSource(key, level, track, identityId, logger
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"] || typeof _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"].get !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
           }
 
           _a.label = 1;
@@ -570,7 +568,7 @@ var putStorageObject = function putStorageObject(key, body, level, track, conten
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"] || typeof _aws_amplify_storage__WEBPACK_IMPORTED_MODULE_1__["Storage"].put !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_0__["e"]);
           }
 
           _a.label = 1;

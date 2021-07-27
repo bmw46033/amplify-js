@@ -21,8 +21,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -175,9 +175,7 @@ var __generator = undefined && undefined.__generator || function (thisArg, body)
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-amazon-button');
 
-var AmplifyAmazonButton =
-/** @class */
-function () {
+var AmplifyAmazonButton = function () {
   function class_1(hostRef) {
     var _this = this;
 
@@ -186,7 +184,7 @@ function () {
      * e.g. SignIn -> 'Create Account' link -> SignUp
      */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
 
     this.federatedSignIn = function (response) {
       var access_token = response.access_token,
@@ -197,7 +195,7 @@ function () {
       }
 
       if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].federatedSignIn !== 'function' || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser !== 'function') {
-        throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+        throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
       }
 
       var date = new Date();
@@ -262,7 +260,7 @@ function () {
       }
 
       try {
-        window.localStorage.setItem(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["j"], JSON.stringify({
+        window.localStorage.setItem(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["i"], JSON.stringify({
           provider: 'amazon'
         }));
       } catch (e) {
@@ -291,16 +289,14 @@ function () {
 
 var logger$1 = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-auth0-button');
 
-var AmplifyAuth0Button =
-/** @class */
-function () {
+var AmplifyAuth0Button = function () {
   function class_2(hostRef) {
     var _this = this;
 
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Auth state change handler for this component */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
 
     this.handleLoad = function () {
       // @ts-ignore Property 'auth0' does not exist on type '{}'.
@@ -342,7 +338,7 @@ function () {
         };
 
         try {
-          localStorage.setItem(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["j"], JSON.stringify(payload));
+          localStorage.setItem(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["i"], JSON.stringify(payload));
         } catch (e) {
           logger$1.debug('Failed to cache auth source into localStorage', e);
         }
@@ -423,9 +419,7 @@ function () {
 
 var logger$2 = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-facebook-button');
 
-var AmplifyFacebookButton =
-/** @class */
-function () {
+var AmplifyFacebookButton = function () {
   function class_3(hostRef) {
     var _this = this;
 
@@ -434,7 +428,7 @@ function () {
      * e.g. SignIn -> 'Create Account' link -> SignUp
      */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
 
     this.federatedSignIn = function (authResponse) {
       var accessToken = authResponse.accessToken,
@@ -445,7 +439,7 @@ function () {
       }
 
       if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].federatedSignIn !== 'function' || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser !== 'function') {
-        throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+        throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
       }
 
       var date = new Date();
@@ -492,7 +486,7 @@ function () {
     this.getLoginStatus = function () {
       window['FB'].getLoginStatus(function (response) {
         try {
-          window.localStorage.setItem(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["j"], JSON.stringify({
+          window.localStorage.setItem(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["i"], JSON.stringify({
             provider: 'facebook'
           }));
         } catch (e) {
@@ -554,9 +548,7 @@ function () {
 
 var logger$3 = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-google-button');
 
-var AmplifyGoogleButton =
-/** @class */
-function () {
+var AmplifyGoogleButton = function () {
   function class_4(hostRef) {
     var _this = this;
 
@@ -565,7 +557,7 @@ function () {
      * e.g. SignIn -> 'Create Account' link -> SignUp
      */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
 
     this.handleError = function (error) {
       console.error(error);
@@ -587,11 +579,11 @@ function () {
           switch (_b.label) {
             case 0:
               if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].federatedSignIn !== 'function' || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].currentAuthenticatedUser !== 'function') {
-                throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+                throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
               }
 
               try {
-                window.localStorage.setItem(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["j"], JSON.stringify({
+                window.localStorage.setItem(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["i"], JSON.stringify({
                   provider: 'google'
                 }));
               } catch (e) {
@@ -670,9 +662,7 @@ function () {
   return class_4;
 }();
 
-var AmplifyOAuthButton =
-/** @class */
-function () {
+var AmplifyOAuthButton = function () {
   function AmplifyOAuthButton(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Federated credentials & configuration. */

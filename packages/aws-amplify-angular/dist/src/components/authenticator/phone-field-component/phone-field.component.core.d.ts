@@ -11,11 +11,11 @@ export declare class PhoneFieldComponentCore implements OnInit {
     _local_phone_number: string;
     _countries: country[];
     constructor(amplifyService: AmplifyService);
-    data: any;
-    placeholder: string;
-    label: string;
-    required: boolean;
-    defaultCountryCode: string;
+    set data(data: any);
+    set placeholder(placeholder: string);
+    set label(label: string);
+    set required(required: boolean);
+    set defaultCountryCode(defaultCountryCode: string);
     phoneFieldChanged: EventEmitter<PhoneFieldOutput>;
     ngOnInit(): void;
     ngOnDestroy(): void;

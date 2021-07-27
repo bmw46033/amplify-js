@@ -23,9 +23,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
-/* harmony import */ var _auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-e49f583d.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
+/* harmony import */ var _auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./auth-helpers-c42c7a9e.js */ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -192,9 +192,7 @@ var __spreadArrays = undefined && undefined.__spreadArrays || function () {
 
 
 
-var AmplifyConfirmSignIn =
-/** @class */
-function () {
+var AmplifyConfirmSignIn = function () {
   function class_1(hostRef) {
     var _this = this;
 
@@ -213,7 +211,7 @@ function () {
     this.submitButtonText = _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].CONFIRM;
     /** Auth state change handler for this component */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Default form field */
 
     this.defaultFormFields = [{
@@ -286,7 +284,7 @@ function () {
             mfaType = this.user['challengeName'] === _auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["C"].SoftwareTokenMFA ? _auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["C"].SoftwareTokenMFA : null;
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].confirmSignIn !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -304,7 +302,7 @@ function () {
 
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["c"])(this.user, this.handleAuthStateChange)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["c"])(this.user, this.handleAuthStateChange)];
 
           case 3:
             _a.sent();
@@ -315,7 +313,7 @@ function () {
 
           case 4:
             error_1 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_1);
             return [3
             /*break*/
             , 6];
@@ -388,9 +386,7 @@ function () {
   return class_1;
 }();
 
-var AmplifyConfirmSignUp =
-/** @class */
-function () {
+var AmplifyConfirmSignUp = function () {
   function class_2(hostRef) {
     var _this = this;
 
@@ -429,14 +425,14 @@ function () {
      * e.g. SignIn -> 'Create Account' link -> SignUp
      */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Username Alias is used to setup authentication with `username`, `email` or `phone_number`  */
 
     this.usernameAlias = 'username';
     this.loading = false;
     this.newFormFields = [];
     this.phoneNumber = {
-      countryDialCodeValue: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["h"],
+      countryDialCodeValue: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["h"],
       phoneNumberValue: null
     };
   }
@@ -457,7 +453,7 @@ function () {
     // TODO: Use optional chaining instead
     this.userInput = this.user && this.user.username;
     this._signUpAttrs = this.user && this.user.signUpAttrs;
-    Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
+    Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
     this.buildFormFields();
   };
 
@@ -499,7 +495,7 @@ function () {
         var newField = Object.assign({}, field);
 
         if (newField.type === 'code') {
-          newField['hint'] = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["i"])(newField) ? Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].CONFIRM_SIGN_UP_LOST_CODE), ' ', Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("amplify-button", {
+          newField['hint'] = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["i"])(newField) ? Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].CONFIRM_SIGN_UP_LOST_CODE), ' ', Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("amplify-button", {
             variant: "anchor",
             onClick: function onClick() {
               return _this.resendConfirmCode();
@@ -529,7 +525,7 @@ function () {
 
       case 'phone_number':
         return function (event) {
-          return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
+          return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
         };
 
       case 'code':
@@ -586,7 +582,7 @@ function () {
         return this.userInput;
 
       case 'phone_number':
-        return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
+        return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
     }
   };
 
@@ -601,7 +597,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].resendSignUp !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             _a.label = 1;
@@ -624,7 +620,7 @@ function () {
 
           case 3:
             error_2 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_2);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_2);
             return [3
             /*break*/
             , 4];
@@ -651,7 +647,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].confirmSignUp !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -680,7 +676,7 @@ function () {
 
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["h"])(username, this._signUpAttrs.password, this.handleAuthStateChange)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["h"])(username, this._signUpAttrs.password, this.handleAuthStateChange)];
 
           case 3:
             // Auto sign in user if password is available from previous workflow
@@ -701,7 +697,7 @@ function () {
 
           case 6:
             error_3 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_3);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_3);
             return [3
             /*break*/
             , 8];
@@ -755,9 +751,7 @@ function () {
 
 var logger = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('ForgotPassword');
 
-var AmplifyForgotPassword =
-/** @class */
-function () {
+var AmplifyForgotPassword = function () {
   function class_3(hostRef) {
     var _this = this;
 
@@ -788,14 +782,14 @@ function () {
     /** Auth state change handler for this component */
 
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Username Alias is used to setup authentication with `username`, `email` or `phone_number`  */
 
     this.usernameAlias = 'username';
     this.delivery = null;
     this.loading = false;
     this.phoneNumber = {
-      countryDialCodeValue: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["h"],
+      countryDialCodeValue: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["h"],
       phoneNumberValue: null
     };
     this.newFormFields = [];
@@ -807,7 +801,7 @@ function () {
   }
 
   class_3.prototype.componentWillLoad = function () {
-    Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
+    Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
     this.buildFormFields();
   };
 
@@ -821,6 +815,7 @@ function () {
     if (this.formFields.length === 0) {
       this.buildDefaultFormFields();
     } else {
+      var newFields_2 = [];
       this.formFields.forEach(function (field) {
         var newField = Object.assign({}, field);
 
@@ -828,8 +823,9 @@ function () {
           return _this.handleFormFieldInputWithCallback(event, field);
         };
 
-        _this.newFormFields.push(newField);
+        newFields_2.push(newField);
       });
+      this.newFormFields = newFields_2;
     }
   };
 
@@ -883,7 +879,7 @@ function () {
 
       case 'phone_number':
         return function (event) {
-          return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
+          return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
         };
 
       case 'password':
@@ -948,7 +944,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].forgotPassword !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -956,9 +952,9 @@ function () {
             switch (this.usernameAlias) {
               case 'phone_number':
                 try {
-                  this.forgotPasswordAttrs.userInput = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
+                  this.forgotPasswordAttrs.userInput = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
                 } catch (error) {
-                  Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
+                  Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
                 }
 
                 break;
@@ -997,7 +993,7 @@ function () {
 
           case 3:
             error_4 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_4);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_4);
             return [3
             /*break*/
             , 5];
@@ -1029,7 +1025,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].forgotPasswordSubmit !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -1054,7 +1050,7 @@ function () {
 
           case 3:
             error_5 = _b.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_5);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_5);
             return [3
             /*break*/
             , 5];
@@ -1115,9 +1111,7 @@ function () {
 
 var logger$1 = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["ConsoleLogger"]('amplify-require-new-password');
 
-var AmplifyRequireNewPassword =
-/** @class */
-function () {
+var AmplifyRequireNewPassword = function () {
   function class_4(hostRef) {
     var _this = this;
 
@@ -1136,7 +1130,7 @@ function () {
     /** Auth state change handler for this component */
 
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** The form fields displayed inside of the forgot password form */
 
     this.formFields = [{
@@ -1155,7 +1149,7 @@ function () {
     this.requiredAttributes = {};
     this.newFormFields = this.formFields;
     this.phoneNumber = {
-      countryDialCodeValue: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["h"],
+      countryDialCodeValue: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["h"],
       phoneNumberValue: ' '
     };
   }
@@ -1202,7 +1196,7 @@ function () {
 
           case 3:
             error_6 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_6);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_6);
             return [3
             /*break*/
             , 4];
@@ -1219,7 +1213,7 @@ function () {
           case 6:
             if (this.currentUser && this.currentUser.challengeParam && this.currentUser.challengeParam.requiredAttributes) {
               userRequiredAttributes = this.currentUser.challengeParam.requiredAttributes;
-              requiredAttributesMap_1 = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["g"])();
+              requiredAttributesMap_1 = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["g"])();
               userRequiredAttributes.forEach(function (attribute) {
                 var formField = {
                   type: attribute,
@@ -1254,7 +1248,7 @@ function () {
   };
 
   class_4.prototype.formatPhoneNumber = function (event) {
-    Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, this.phoneNumber);
+    Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, this.phoneNumber);
     /**
      * composePhoneNumberInput will throw an error if the phoneNumberValue it receives
      * is empty. Adding a check here to try and make sure that doesn't happen...but will
@@ -1262,8 +1256,8 @@ function () {
      */
 
     try {
-      if (event.target.name === _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["b"] && this.phoneNumber.phoneNumberValue) {
-        var composedInput = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
+      if (event.target.name === _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["b"] && this.phoneNumber.phoneNumberValue) {
+        var composedInput = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
         this.requiredAttributes['phone_number'] = composedInput;
       }
     } catch (err) {
@@ -1283,7 +1277,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].completeNewPassword !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -1333,7 +1327,7 @@ function () {
           case 5:
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["c"])(user, this.handleAuthStateChange)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["c"])(user, this.handleAuthStateChange)];
 
           case 6:
             _b.sent();
@@ -1347,7 +1341,7 @@ function () {
 
           case 8:
             error_7 = _b.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_7);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_7);
             return [3
             /*break*/
             , 10];
@@ -1400,9 +1394,7 @@ function () {
 
 var amplifySignInCss = ":host{--footer-size:var(--amplify-text-sm);--footer-color:var(--amplify-grey);--footer-font-family:var(--amplify-font-family);--font-weight:var(--amplify-font-weight)}.sign-in-form-footer{font-family:var(--footer-font-family);font-size:var(--footer-size);color:var(--footer-color);font-weight:--font-weight;display:-ms-flexbox;display:flex;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}.sign-in-form-footer amplify-button{margin-bottom:0.625rem}@media (min-width: 672px){.sign-in-form-footer{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:baseline;align-items:baseline}.sign-in-form-footer amplify-button{margin-bottom:0}}.sign-in-form-footer *+*{margin-bottom:15px}.full-width-footer-content{width:100%}";
 
-var AmplifySignIn =
-/** @class */
-function () {
+var AmplifySignIn = function () {
   function class_5(hostRef) {
     var _this = this;
 
@@ -1422,7 +1414,7 @@ function () {
     /** Auth state change handler for this component */
     // prettier-ignore
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Username Alias is used to setup authentication with `username`, `email` or `phone_number`  */
 
     this.usernameAlias = 'username';
@@ -1452,7 +1444,7 @@ function () {
 
     this.loading = false;
     this.phoneNumber = {
-      countryDialCodeValue: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["h"],
+      countryDialCodeValue: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["h"],
       phoneNumberValue: null
     };
     this.signInAttributes = {
@@ -1462,7 +1454,7 @@ function () {
   }
 
   class_5.prototype.componentWillLoad = function () {
-    Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
+    Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
     this.buildFormFields();
   };
 
@@ -1482,7 +1474,7 @@ function () {
 
       case 'phone_number':
         return function (event) {
-          return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
+          return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
         };
 
       case 'password':
@@ -1519,9 +1511,9 @@ function () {
             switch (this.usernameAlias) {
               case 'phone_number':
                 try {
-                  this.signInAttributes.userInput = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
+                  this.signInAttributes.userInput = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
                 } catch (error) {
-                  Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
+                  Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
                 }
 
             }
@@ -1529,7 +1521,7 @@ function () {
             username = this.signInAttributes.userInput.trim();
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["h"])(username, this.signInAttributes.password, this.handleAuthStateChange, this.usernameAlias)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["h"])(username, this.signInAttributes.password, this.handleAuthStateChange, this.usernameAlias)];
 
           case 1:
             _a.sent();
@@ -1611,12 +1603,12 @@ function () {
     if (this.formFields.length === 0) {
       this.buildDefaultFormFields();
     } else {
-      var newFields_2 = [];
+      var newFields_3 = [];
       this.formFields.forEach(function (field) {
         var newField = Object.assign({}, field); // TODO: handle hint better
 
         if (newField.type === 'password') {
-          newField['hint'] = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["i"])(newField) ? Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].FORGOT_PASSWORD_TEXT), ' ', Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("amplify-button", {
+          newField['hint'] = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["i"])(newField) ? Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div", null, _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["I18n"].get(_Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_4__["T"].FORGOT_PASSWORD_TEXT), ' ', Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["h"])("amplify-button", {
             variant: "anchor",
             onClick: function onClick() {
               return _this.handleAuthStateChange(_auth_types_caf635db_js__WEBPACK_IMPORTED_MODULE_2__["A"].ForgotPassword);
@@ -1631,9 +1623,9 @@ function () {
 
         _this.setFieldValue(newField, _this.signInAttributes);
 
-        newFields_2.push(newField);
+        newFields_3.push(newField);
       });
-      this.newFormFields = newFields_2;
+      this.newFormFields = newFields_3;
     }
   };
 
@@ -1725,9 +1717,7 @@ function () {
 AmplifySignIn.style = amplifySignInCss;
 var amplifySignUpCss = "amplify-sign-up{--footer-font-family:var(--amplify-font-family);--footer-font-size:var(--amplify-text-sm);--footer-color:var(--amplify-grey);--font-weight:var(--amplify-font-weight)}.sign-up-form-footer{font-family:var(--footer-font-family);font-size:var(--footer-font-size);color:var(--footer-color);font-weight:--font-weight;display:-ms-flexbox;display:flex;-ms-flex-direction:column-reverse;flex-direction:column-reverse;-ms-flex-align:center;align-items:center;-ms-flex-pack:distribute;justify-content:space-around}.sign-up-form-footer amplify-button{margin-bottom:0.625rem}@media (min-width: 672px){.sign-up-form-footer{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;-ms-flex-align:baseline;align-items:baseline}.sign-up-form-footer amplify-button{margin-bottom:0}}.sign-up-form-footer *+*{margin-bottom:15px}";
 
-var AmplifySignUp =
-/** @class */
-function () {
+var AmplifySignUp = function () {
   function class_6(hostRef) {
     var _this = this;
 
@@ -1779,14 +1769,14 @@ function () {
      */
     // prettier-ignore
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     /** Username Alias is used to setup authentication with `username`, `email` or `phone_number`  */
 
     this.usernameAlias = 'username'; // private userInput: string | PhoneNumberInterface;
 
     this.newFormFields = [];
     this.phoneNumber = {
-      countryDialCodeValue: _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["h"],
+      countryDialCodeValue: _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["h"],
       phoneNumberValue: null
     };
     this.loading = false;
@@ -1818,7 +1808,7 @@ function () {
 
       case 'phone_number':
         return function (event) {
-          return Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
+          return Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["h"])(event, _this.phoneNumber);
         };
 
       default:
@@ -1864,9 +1854,9 @@ function () {
   class_6.prototype.assignPhoneNumberToSignUpAttributes = function () {
     if (this.phoneNumber.phoneNumberValue) {
       try {
-        this.signUpAttributes.attributes.phone_number = Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
+        this.signUpAttributes.attributes.phone_number = Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["b"])(this.phoneNumber);
       } catch (error) {
-        Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
+        Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error);
       }
     }
   };
@@ -1918,7 +1908,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].signUp !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -1940,7 +1930,7 @@ function () {
             , 4];
             return [4
             /*yield*/
-            , Object(_auth_helpers_e49f583d_js__WEBPACK_IMPORTED_MODULE_7__["h"])(this.signUpAttributes.username, this.signUpAttributes.password, this.handleAuthStateChange)];
+            , Object(_auth_helpers_c42c7a9e_js__WEBPACK_IMPORTED_MODULE_7__["h"])(this.signUpAttributes.username, this.signUpAttributes.password, this.handleAuthStateChange)];
 
           case 3:
             _a.sent();
@@ -1963,7 +1953,7 @@ function () {
 
           case 6:
             error_8 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_8);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_8);
             return [3
             /*break*/
             , 8];
@@ -2091,7 +2081,7 @@ function () {
     if (this.formFields.length === 0) {
       this.buildDefaultFormFields();
     } else {
-      var newFields_3 = [];
+      var newFields_4 = [];
       this.formFields.forEach(function (field) {
         var newField = Object.assign({}, field);
 
@@ -2101,9 +2091,9 @@ function () {
 
         _this.setFieldValue(field, _this.signUpAttributes);
 
-        newFields_3.push(newField);
+        newFields_4.push(newField);
       });
-      this.newFormFields = newFields_3;
+      this.newFormFields = newFields_4;
     }
   };
 
@@ -2146,7 +2136,7 @@ function () {
   };
 
   class_6.prototype.componentWillLoad = function () {
-    Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
+    Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["c"])(this.usernameAlias);
     this.buildFormFields();
   };
 
@@ -2204,14 +2194,12 @@ function () {
 AmplifySignUp.style = amplifySignUpCss;
 var logger$2 = new _aws_amplify_core__WEBPACK_IMPORTED_MODULE_1__["Logger"]('AmplifyVerifyContact');
 
-var AmplifyVerifyContact =
-/** @class */
-function () {
+var AmplifyVerifyContact = function () {
   function class_7(hostRef) {
     Object(_index_83f2275b_js__WEBPACK_IMPORTED_MODULE_0__["r"])(this, hostRef);
     /** Authentication state handler */
 
-    this.handleAuthStateChange = _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["d"];
+    this.handleAuthStateChange = _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["d"];
     this.loading = false;
   }
 
@@ -2229,7 +2217,7 @@ function () {
             attr = this.verifyAttr;
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].verifyCurrentUserAttributeSubmit !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -2253,7 +2241,7 @@ function () {
 
           case 3:
             error_9 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_9);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_9);
             logger$2.error(error_9);
             return [3
             /*break*/
@@ -2288,7 +2276,7 @@ function () {
             }
 
             if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_3__["Auth"].verifyCurrentUserAttribute !== 'function') {
-              throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
+              throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_5__["N"]);
             }
 
             this.loading = true;
@@ -2311,7 +2299,7 @@ function () {
 
           case 3:
             error_10 = _a.sent();
-            Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_10);
+            Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_6__["a"])(error_10);
             logger$2.error(error_10);
             return [3
             /*break*/
@@ -2429,9 +2417,9 @@ function () {
 
 /***/ }),
 
-/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js":
+/***/ "../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js":
 /*!**********************************************************************!*\
-  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-e49f583d.js ***!
+  !*** ../amplify-ui-components/dist/esm-es5/auth-helpers-c42c7a9e.js ***!
   \**********************************************************************/
 /*! exports provided: c, h */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -2446,8 +2434,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @aws-amplify/auth */ "@aws-amplify/auth");
 /* harmony import */ var _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _Translations_97eed81d_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Translations-97eed81d.js */ "../amplify-ui-components/dist/esm-es5/Translations-97eed81d.js");
-/* harmony import */ var _constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-71263f97.js */ "../amplify-ui-components/dist/esm-es5/constants-71263f97.js");
-/* harmony import */ var _helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-b936deac.js */ "../amplify-ui-components/dist/esm-es5/helpers-b936deac.js");
+/* harmony import */ var _constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants-56d75870.js */ "../amplify-ui-components/dist/esm-es5/constants-56d75870.js");
+/* harmony import */ var _helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./helpers-3e41b1da.js */ "../amplify-ui-components/dist/esm-es5/helpers-3e41b1da.js");
 var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
   function adopt(value) {
     return value instanceof P ? value : new P(function (resolve) {
@@ -2606,7 +2594,7 @@ function checkContact(user, handleAuthStateChange) {
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].verifiedContact !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           } // If `user` is a federated user, we shouldn't call `verifiedContact`
           // since `user` isn't `CognitoUser`
 
@@ -2643,7 +2631,7 @@ function checkContact(user, handleAuthStateChange) {
 
         case 3:
           error_1 = _a.sent();
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_1);
           return [3
           /*break*/
           , 4];
@@ -2664,7 +2652,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
       switch (_a.label) {
         case 0:
           if (!_aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"] || typeof _aws_amplify_auth__WEBPACK_IMPORTED_MODULE_2__["Auth"].signIn !== 'function') {
-            throw new Error(_constants_71263f97_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
+            throw new Error(_constants_56d75870_js__WEBPACK_IMPORTED_MODULE_4__["N"]);
           }
 
           _a.label = 1;
@@ -2759,7 +2747,7 @@ var handleSignIn = function handleSignIn(username, password, handleAuthStateChan
             }
           }
 
-          Object(_helpers_b936deac_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
+          Object(_helpers_3e41b1da_js__WEBPACK_IMPORTED_MODULE_5__["a"])(error_2);
           return [3
           /*break*/
           , 10];

@@ -8,9 +8,9 @@ export declare class AuthenticatorComponentCore implements OnInit {
     constructor(amplifyService: AmplifyService);
     ngOnInit(): void;
     hide: string[];
-    data: any;
-    signUpConfig: any;
-    usernameAttributes: string;
+    set data(data: any);
+    set signUpConfig(signUpConfig: any);
+    set usernameAttributes(usernameAttributes: string);
     subscribe(): void;
     shouldHide(comp: any): boolean;
 }

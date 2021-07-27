@@ -29,6 +29,7 @@ import {
 	CopyObjectCommand,
 	PutObjectCommandInput,
 	GetObjectCommandInput,
+	PutObjectRequest,
 } from '@aws-sdk/client-s3';
 import { formatUrl } from '@aws-sdk/util-format-url';
 import { createRequest } from '@aws-sdk/util-create-request';
@@ -295,13 +296,7 @@ export class AWSS3Provider implements StorageProvider {
 			track,
 			progressCallback,
 		} = opt;
-		const {
-			serverSideEncryption,
-			SSECustomerAlgorithm,
-			SSECustomerKey,
-			SSECustomerKeyMD5,
-			SSEKMSKeyId,
-		} = opt;
+		const { SSECustomerAlgorithm, SSECustomerKey, SSECustomerKeyMD5 } = opt;
 
 		const prefix = this._prefix(opt);
 		const final_key = prefix + key;
@@ -322,12 +317,6 @@ export class AWSS3Provider implements StorageProvider {
 		if (contentLanguage) params.ResponseContentLanguage = contentLanguage;
 		if (contentType) params.ResponseContentType = contentType;
 
-		if (serverSideEncryption) {
-			params.ServerSideEncryption = serverSideEncryption;
-			if (SSEKMSKeyId) {
-				params.SSEKMSKeyId = SSEKMSKeyId;
-			}
-		}
 		if (SSECustomerAlgorithm) {
 			params.SSECustomerAlgorithm = SSECustomerAlgorithm;
 		}
