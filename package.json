@@ -28,6 +28,9 @@
 		"publish:native": "lerna publish --canary --force-publish \"*\" --yes --dist-tag=native --preid=native --exact --no-verify-access",
 		"publish:verdaccio": "lerna publish --no-push --canary minor --dist-tag=unstable --preid=unstable --exact --force-publish --yes --no-verify-access"
 	},
+  "publishConfig": {
+   "@BMW46033:registry": "https://npm.pkg.github.com"
+ },
 	"husky": {
 		"hooks": {
 			"pre-commit": "pretty-quick --staged"
